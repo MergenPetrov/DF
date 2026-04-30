@@ -943,6 +943,52 @@ if (element_status)
                               return false;
                             };
 
+                          // Same as find_first_root_bracket but scans from hi DOWN to lo,
+                          // returning the first sign-change encountered from the upper end.
+                          // For OW stage with multiple roots, this prefers the oil-dominated
+                          // branch (beta_o ~ 0.99) over the water-dominated branch (beta_o ~ 0).
+                          // x_left/x_right are returned with x_left <= x_right.
+                          auto find_last_root_bracket = [&] (const std::function<double(double)> &f,
+                                                             double lo,
+                                                             double hi,
+                                                             int nscan,
+                                                             double &x_left,
+                                                             double &x_right,
+                                                             double &x_best,
+                                                             double &f_best) -> bool
+                            {
+                              x_left = lo;
+                              x_right = hi;
+                              x_best = hi;
+                              f_best = f (hi);
+                              double best_abs = fabs (f_best);
+
+                              double x_prev = hi;
+                              double f_prev = f_best;
+                              for (int is = 1; is <= nscan; ++is)
+                                {
+                                  const double t = static_cast<double> (is) / static_cast<double> (nscan);
+                                  const double x_now = hi - (hi - lo) * t;   // hi -> lo
+                                  const double f_now = f (x_now);
+                                  if (fabs (f_now) < best_abs)
+                                    {
+                                      best_abs = fabs (f_now);
+                                      x_best = x_now;
+                                      f_best = f_now;
+                                    }
+                                  if (std::isfinite (f_prev) && std::isfinite (f_now) && f_prev * f_now <= 0.0)
+                                    {
+                                      // Bracket between x_now (lower) and x_prev (upper).
+                                      x_left  = x_now;
+                                      x_right = x_prev;
+                                      return true;
+                                    }
+                                  x_prev = x_now;
+                                  f_prev = f_now;
+                                }
+                              return false;
+                            };
+
                           auto solve_scalar_root = [&] (const std::function<double(double)> &f,
                                                         double x_left,
                                                         double x_right,
@@ -1060,7 +1106,11 @@ if (element_status)
                               double beta_best_res = 0.0;
                               double beta_left = beta_min;
                               double beta_right = beta_max;
-                              const bool ow_root_exists = find_first_root_bracket (
+                              // Scan beta_o from high (oil-dominated) to low (water-dominated)
+                              // and pick the first bracket. With multiple roots of R_o, this
+                              // selects the physically meaningful oil-rich branch (beta_o ~ 0.99)
+                              // over the degenerate water-rich one (beta_o -> 0, alpha_w -> 1).
+                              const bool ow_root_exists = find_last_root_bracket (
                                   [&] (double b) { return compute_ro_only (alpha_g_gl, b, nullptr); },
                                   beta_min, beta_max, 64,
                                   beta_left, beta_right, beta_best, beta_best_res);
@@ -3544,6 +3594,50 @@ void wells_compute_base::test_function (
       return false;
     };
 
+  // Mirror copy of the main-block find_last_root_bracket: scans from hi DOWN
+  // to lo and returns the first sign-change. In OW stage this picks the
+  // oil-dominated branch (beta_o ~ 0.99) over the water-dominated one
+  // (beta_o -> 0, alpha_w -> 1). x_left <= x_right on output.
+  auto find_last_root_bracket = [&] (const std::function<double(double)> &f,
+                                     double lo,
+                                     double hi,
+                                     int nscan,
+                                     double &x_left,
+                                     double &x_right,
+                                     double &x_best,
+                                     double &f_best) -> bool
+    {
+      x_left = lo;
+      x_right = hi;
+      x_best = hi;
+      f_best = f (hi);
+      double best_abs = fabs (f_best);
+
+      double x_prev = hi;
+      double f_prev = f_best;
+      for (int is = 1; is <= nscan; ++is)
+        {
+          const double t = static_cast<double> (is) / static_cast<double> (nscan);
+          const double x_now = hi - (hi - lo) * t;   // hi -> lo
+          const double f_now = f (x_now);
+          if (fabs (f_now) < best_abs)
+            {
+              best_abs = fabs (f_now);
+              x_best = x_now;
+              f_best = f_now;
+            }
+          if (std::isfinite (f_prev) && std::isfinite (f_now) && f_prev * f_now <= 0.0)
+            {
+              x_left  = x_now;
+              x_right = x_prev;
+              return true;
+            }
+          x_prev = x_now;
+          f_prev = f_now;
+        }
+      return false;
+    };
+
   auto solve_scalar_root = [&] (const std::function<double(double)> &f,
                                 double x_left,
                                 double x_right,
@@ -3646,7 +3740,8 @@ void wells_compute_base::test_function (
       double beta_best_res = 0.0;
       double beta_left = beta_min;
       double beta_right = beta_max;
-      const bool ow_root_exists = find_first_root_bracket (
+      // Same OW-branch selection as in the main block: scan from hi down.
+      const bool ow_root_exists = find_last_root_bracket (
           [&] (double b) { return compute_ro_only (alpha_g_gl, b, nullptr); },
           beta_min, beta_max, 64,
           beta_left, beta_right, beta_best, beta_best_res);
