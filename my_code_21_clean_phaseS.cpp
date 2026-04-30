@@ -474,7 +474,14 @@ if (element_status)
                           int it = 0;
                           int max_it = 10;
 
-                          double average_volumetric_mixture_velocity = tnav_div (wsncs->wsn_mixture_molar_rate, seg.wsn->pipe_props.area * element_status->avg_xi * internal_const::DAYS_TO_SEC ());
+                          // Take mixture superficial velocity as a magnitude. The drift-flux
+                          // closures (Shi/Eclipse) are written for a positive j_m; flow direction
+                          // is captured by wsncs->wsn_flow_dir / segment topology, not by the
+                          // sign of j_m itself. The analytical chain rule then carries an extra
+                          // sign factor: d|j_m|/dx = sign(j_m_signed) * d j_m_signed / dx.
+                          const double j_m_signed_main = tnav_div (wsncs->wsn_mixture_molar_rate, seg.wsn->pipe_props.area * element_status->avg_xi * internal_const::DAYS_TO_SEC ());
+                          const double sign_jm_main    = (j_m_signed_main >= 0.0) ? 1.0 : -1.0;
+                          double average_volumetric_mixture_velocity = fabs (j_m_signed_main);
 
                               for (unsigned int id = 0; id < 1U + mp.nc + 1U; id++)
                                 {
@@ -492,11 +499,12 @@ if (element_status)
                                     }
 
                                   if (id < 1U + mp.nc) //p^j, z^c_j
-                                    wsncs->D_average_volumetric_mixture_velocity_D_seg_vars[id] = -tnav_div (wsncs->wsn_mixture_molar_rate, seg.wsn->pipe_props.area * internal_const::DAYS_TO_SEC () * element_status->avg_xi * element_status->avg_xi)
-                                                                                                * element_status->avg_D_xi[id];
+                                    wsncs->D_average_volumetric_mixture_velocity_D_seg_vars[id] = sign_jm_main * (
+                                                                                                  -tnav_div (wsncs->wsn_mixture_molar_rate, seg.wsn->pipe_props.area * internal_const::DAYS_TO_SEC () * element_status->avg_xi * element_status->avg_xi)
+                                                                                                * element_status->avg_D_xi[id]);
                                                                                                 //* D_avg_xi_numerical[id];
                                   else
-                                    wsncs->D_average_volumetric_mixture_velocity_D_seg_vars[id] = tnav_div (1., seg.wsn->pipe_props.area * internal_const::DAYS_TO_SEC () * element_status->avg_xi);
+                                    wsncs->D_average_volumetric_mixture_velocity_D_seg_vars[id] = sign_jm_main * tnav_div (1., seg.wsn->pipe_props.area * internal_const::DAYS_TO_SEC () * element_status->avg_xi);
                                 }
 
                           (void) error;
@@ -3071,8 +3079,13 @@ void wells_compute_base::test_function (
   const double diameter = seg.wsn->pipe_props.diameter;
   const double surf_mult = internal_const::SURFACE_TENSION_DYNES_CM_TO_NEWTON_M_MULT ();
 
-  average_volumetric_velocity =
-      tnav_div (wsncs->wsn_mixture_molar_rate, area * element_status->avg_xi);
+  // Same convention as the main DF block: take j_m as a magnitude so that
+  // the value path of test_function (used for finite-difference checks)
+  // mirrors exactly what the production code does. Without fabs() here,
+  // numerical derivatives would silently disagree with the analytical
+  // sign-corrected derivatives even though both halves are individually right.
+  const double j_m_signed_tf = tnav_div (wsncs->wsn_mixture_molar_rate, area * element_status->avg_xi);
+  average_volumetric_velocity = fabs (j_m_signed_tf);
   avg_xi = element_status->avg_xi;
   xi = element_status->phase_xi[PHASE_GAS];
 
