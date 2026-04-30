@@ -2168,6 +2168,28 @@ if (element_status)
                               + D_water_phase_velocity_D_beta_o  * D_beta_o_D_seg_vars[id];
                         }
 
+                      // ------------------------------------------------------------------
+                      // Restore signed phase velocities after the magnitude-only DF solve.
+                      // The Shi/Eclipse closures are written for a positive j_m, so the
+                      // local DF block uses |j_m| internally (mixture_superficial_velocity
+                      // = fabs(...) above). For the outer Newton, mass_rate, and
+                      // component_rate assembly we need flow direction back: multiply each
+                      // phase velocity and its full-chain derivative by sign(q_tot).
+                      // d sign(q_tot) / d q_tot = 0 almost everywhere -> simple scalar mult.
+                      // ------------------------------------------------------------------
+                      const double sign_qtot = (wsncs->wsn_mixture_molar_rate >= 0.0) ? 1.0 : -1.0;
+                      gas_phase_velocity    *= sign_qtot;
+                      liquid_phase_velocity *= sign_qtot;
+                      oil_phase_velocity    *= sign_qtot;
+                      water_phase_velocity  *= sign_qtot;
+                      for (unsigned int id = 0; id < nseg_vars; ++id)
+                        {
+                          D_gas_phase_velocity_D_seg_vars_final[id]    *= sign_qtot;
+                          D_liquid_phase_velocity_D_seg_vars_final[id] *= sign_qtot;
+                          D_oil_phase_velocity_D_seg_vars_final[id]    *= sign_qtot;
+                          D_water_phase_velocity_D_seg_vars_final[id]  *= sign_qtot;
+                        }
+
                       // ============================================================================
                       // COMPONENT RATES MUST BE COMPUTED ONCE, AFTER FIXED-POINT
                       // ============================================================================
@@ -3708,10 +3730,17 @@ void wells_compute_base::test_function (
   bubble_rise_velocity_OW_buf = state_now.bubble_rise_velocity_OW;
   C_OW_buf = state_now.C0_OW;
   V_d_OW_buf = state_now.drift_velocity_OW;
-  phase_gas_velocity_buf = state_now.vels.gas;
-  phase_liquid_velocity_buf = state_now.vels.liquid;
-  oil_velocity_buf = state_now.vels.oil;
-  water_velocity_buf = state_now.vels.water;
+  // Mirror the main-block convention: sign_qtot restores flow direction on
+  // phase velocities for downstream consumers (FD checks compare these values
+  // and qc against signed analytical exports). The local DF residuals
+  // (dbg_R_*) below stay in the magnitude convention, because vs_*_input
+  // were also computed as magnitudes — that is the system the value path
+  // actually solved.
+  const double sign_qtot_tf = (wsncs->wsn_mixture_molar_rate >= 0.0) ? 1.0 : -1.0;
+  phase_gas_velocity_buf    = sign_qtot_tf * state_now.vels.gas;
+  phase_liquid_velocity_buf = sign_qtot_tf * state_now.vels.liquid;
+  oil_velocity_buf          = sign_qtot_tf * state_now.vels.oil;
+  water_velocity_buf        = sign_qtot_tf * state_now.vels.water;
 
   dbg_R_g = alpha_g * state_now.vels.gas - gas_superficial_velocity_input;
   dbg_R_o = alpha_o * state_now.vels.oil - oil_superficial_velocity_input;
@@ -3775,7 +3804,12 @@ void wells_compute_base::test_function (
           phase_holdup = alpha_w;
         }
 
-      const double phase_superficial_flux = phase_velocity * phase_holdup * area;
+      // Apply sign_qtot here so phase fluxes (and consequently
+      // wsn_component_rate / wsn_mixture_mass_rate) are signed exactly the
+      // same way as in the main analytical block. Without this, finite-
+      // difference numerical derivatives would be magnitude-only and silently
+      // disagree with the sign-restored analytical Jacobian.
+      const double phase_superficial_flux = sign_qtot_tf * phase_velocity * phase_holdup * area;
       for (auto ic = mp.nc0; ic < mp.nc; ++ic)
         {
           wsncs->wsn_component_rate[ic] +=
