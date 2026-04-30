@@ -1184,7 +1184,15 @@ if (element_status)
                           const double alpha_l_gl = std::max (0.0, 1.0 - alpha_g_gl);
                           if (alpha_l_gl > 1.0e-10 && fabs (liquid_superficial_velocity_input) > 1.0e-14)
                             {
-                              const double beta_target = clamp01 (beta_input);
+                              // Pin beta_target away from {0, 1} so the OW_TARGET_ACCEPT
+                              // path does not land exactly on the simplex boundary, where
+                              // V_d_OW ~ (1 - beta_o)^2 and D_v_o_D_beta_o vanish, making
+                              // the IFT 2x2 detJ collapse by ~5 orders of magnitude.
+                              // 1e-3 keeps alpha_w >= 0.1% of alpha_l (still effectively
+                              // dry) while leaving the local Jacobian well-conditioned.
+                              const double beta_pin_eps = 1.0e-3;
+                              const double beta_target = std::max (beta_pin_eps,
+                                                                   std::min (1.0 - beta_pin_eps, beta_input));
                               const double Ro_target = compute_ro_only (alpha_g_gl, beta_target, nullptr);
                               PR1 (LOG_WELL_SECTION, LOG_MESSAGE, WELL_PARAMS,
                                    "MERGEN_DF_TARGET: Well {}: Seg_idx = {}, stage = OW, x_target = {}, f_target = {}\n",
@@ -2341,6 +2349,26 @@ if (element_status)
                               D_water_phase_velocity_partial_D_seg_vars[id]
                               + D_water_phase_velocity_D_alpha_g * D_alpha_g_D_seg_vars[id]
                               + D_water_phase_velocity_D_beta_o  * D_beta_o_D_seg_vars[id];
+                        }
+
+                      // ------------------------------------------------------------------
+                      // Restore signed phase velocities after the magnitude-only DF solve.
+                      // The Shi/Eclipse closures inside the local DF block work with j_m
+                      // as a magnitude; the outer Newton, mass_rate and component_rate
+                      // assembly need flow direction back. d sign(q_tot)/d q_tot = 0
+                      // almost everywhere -> simple scalar mult of values + columns.
+                      // ------------------------------------------------------------------
+                      const double sign_qtot = (wsncs->wsn_mixture_molar_rate >= 0.0) ? 1.0 : -1.0;
+                      gas_phase_velocity    *= sign_qtot;
+                      liquid_phase_velocity *= sign_qtot;
+                      oil_phase_velocity    *= sign_qtot;
+                      water_phase_velocity  *= sign_qtot;
+                      for (unsigned int id = 0; id < nseg_vars; ++id)
+                        {
+                          D_gas_phase_velocity_D_seg_vars_final[id]    *= sign_qtot;
+                          D_liquid_phase_velocity_D_seg_vars_final[id] *= sign_qtot;
+                          D_oil_phase_velocity_D_seg_vars_final[id]    *= sign_qtot;
+                          D_water_phase_velocity_D_seg_vars_final[id]  *= sign_qtot;
                         }
 
                       // ============================================================================
@@ -3866,7 +3894,11 @@ void wells_compute_base::test_function (
   const double alpha_l_gl = std::max (0.0, 1.0 - alpha_g_gl);
   if (alpha_l_gl > 1.0e-10 && fabs (liquid_superficial_velocity_input) > 1.0e-14)
     {
-      const double beta_target = clamp01 (beta_input);
+      // Same pin as in the main block: keep beta_target inside (0, 1) to
+      // avoid collapsing the IFT 2x2 detJ on the simplex boundary.
+      const double beta_pin_eps = 1.0e-3;
+      const double beta_target = std::max (beta_pin_eps,
+                                           std::min (1.0 - beta_pin_eps, beta_input));
       const double Ro_target = compute_ro_only (alpha_g_gl, beta_target, nullptr);
 
       double beta_best = beta_target;
@@ -3965,10 +3997,14 @@ void wells_compute_base::test_function (
   bubble_rise_velocity_OW_buf = state_now.bubble_rise_velocity_OW;
   C_OW_buf = state_now.C0_OW;
   V_d_OW_buf = state_now.drift_velocity_OW;
-  phase_gas_velocity_buf = state_now.vels.gas;
-  phase_liquid_velocity_buf = state_now.vels.liquid;
-  oil_velocity_buf = state_now.vels.oil;
-  water_velocity_buf = state_now.vels.water;
+  // Mirror of the main-block convention: restore flow direction on phase
+  // velocities. dbg_R_* below stay in magnitude (vs_*_input were also
+  // computed as magnitudes — that is the system value-path actually solved).
+  const double sign_qtot_tf = (wsncs->wsn_mixture_molar_rate >= 0.0) ? 1.0 : -1.0;
+  phase_gas_velocity_buf    = sign_qtot_tf * state_now.vels.gas;
+  phase_liquid_velocity_buf = sign_qtot_tf * state_now.vels.liquid;
+  oil_velocity_buf          = sign_qtot_tf * state_now.vels.oil;
+  water_velocity_buf        = sign_qtot_tf * state_now.vels.water;
 
   dbg_R_g = alpha_g * state_now.vels.gas - gas_superficial_velocity_input;
   dbg_R_o = alpha_o * state_now.vels.oil - oil_superficial_velocity_input;
@@ -4032,7 +4068,10 @@ void wells_compute_base::test_function (
           phase_holdup = alpha_w;
         }
 
-      const double phase_superficial_flux = phase_velocity * phase_holdup * area;
+      // Apply sign_qtot_tf so phase fluxes match the sign convention of the
+      // main analytical block; otherwise FD numerical derivatives flip sign
+      // relative to the sign-restored analytical export.
+      const double phase_superficial_flux = sign_qtot_tf * phase_velocity * phase_holdup * area;
       for (auto ic = mp.nc0; ic < mp.nc; ++ic)
         {
           wsncs->wsn_component_rate[ic] +=
