@@ -1,0 +1,509 @@
+'W1'    seg   1 ind   0 par  -1 outflows 1 flow dir n q_tot -3.0081e+06 p 6.8948e+01 dpth 0.0000e+00 dev None zc 0.000e+00 1.283e-02 9.872e-01
+'W1'    seg   2 ind   1 par   1 outflows 1 flow dir ↑ q_tot -3.0081e+06 p 7.0460e+01 dpth 3.0480e+01 dev None zc 3.026e-17 1.283e-02 9.872e-01
+       con   0 blk [ 11, 11,  2] seg   2 q_tot -3.0081e+06 p 7.0286e+01 bulk_p 2.7663e+02 bp 2.1195e+02 dd 1.417e+02 gh -3.139e-03 phase mobs 0.000e+00 7.377e-02 1.320e+01
+well W1: reachable segments = 2, wcb_ss size = 2, seg_ids_msw_mc = 2, segment_ids = 2
+MERGEN_DF_NEWTON_ALPHAO_START: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, alpha_g0 = 0.262674817115136, alpha_o0 = 0.7373251828848639, alpha_w0 = 0, beta_o0 = 1, beta_flow = 1, beta_input = 1, beta_seed = 1, seed_from_prev_df = 1, seed_generation = 30, seed_reset = 0, jsg_in = 0.08586201604006535, jso_in = 9.846490495866592e-05, jsw_in = 0, flux_scale = 0.08596048094502402, Rg0 = -1.3881812366278723e-12, Ro0 = 1.3881920108869614e-12, Rw0 = 0, norm0 = 1.614906316677873e-11, abs0 = 1.3881812366278723e-12
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 1, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 0.262674817115136, alpha_o = 0.7373251828848639, alpha_w = 0, beta_o = 1, F1 = -1.3881812366278723e-12, F2 = 0, Rg = -1.3881812366278723e-12, Ro = 1.3881920108869614e-12, Rw = 0, norm = 1.614906316677873e-11, abs_norm = 1.3881812366278723e-12, detJ = 0, step = 0, reason = CONVERGED
+MERGEN_DF_NEWTON_ALPHAO_FINAL: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, converged = 1, step_failed = 0, it = 1, alpha_g = 0.262674817115136, alpha_o = 0.7373251828848639, alpha_w = 0, beta_o = 1, Rg = -1.3881812366278723e-12, Ro = 1.3881920108869614e-12, Rw = 0, res_norm = 1.9631923504374384e-12, norm_initial = 1.614906316677873e-11, norm_best = 1.614906316677873e-11, abs_initial = 1.3881812366278723e-12, abs_best = 1.3881812366278723e-12, detJ_last = 0, beta_flow = 1, beta_input = 1, beta_seed = 1, seed_reset = 0
+MERGEN_DF_SEED_ONLY: Well W1: Seg_idx = 1, seed_from_prev_df = 1, seed_generation = 30, seed_alpha_g = 0.262674817115136, seed_alpha_o = 0.7373251828848639, seed_alpha_w = 0, flash_alpha_g = 0.9988545328751518, flash_alpha_o = 0.0011454671248482089, flash_alpha_w = 0, j_input_source = FLASH_PHASE_S_CURRENT_JMIX
+MERGEN: Well W1: it = 1, Seg_idx = 1, error = 1.9631923504374384e-12, average_volumetric_mixture_velocity = -0.08596048094502402, element_status->avg_xi = 55.507753802373585, seg.wsn->pipe_props.area = 7.296587699003967, wsncs->wsn_mixture_molar_rate = -3008056.845800602, wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.22372312789802987, gas_liq_interfacial_tension = 0.011802712111832623, gas_density = 54.8068308313423, liquid_density = 666.7169902993951, diametr_dimless = 2173.7139435519166, bubble_rise_velocity = 0.11236055093504349, ksi = 0.262674817115136, Kut_number = 3.2, flooding_velocity = 1.2540569362530192, K_g = 1.8782451147331842, element_status->phase_S[PHASE_GAS] = 0.9988545328751518, seg.wsn->pipe_props.diameter = 3.048, phase_S_WAT = 0, phase_S_OIL = 0.0011454671248482089, phase_S_GAS = 0.9988545328751518, jsg_in = -0.08586201604006535, jso_in = -9.846490495866592e-05, jsw_in = -0, phase_inputs_from_lagged_map = 0, lagged_phase_input_regularized = 0, lagged_lambda = 0, lagged_det = 0, gas_root_sign_mismatch = 0, vg_floor = -0.27506422006458625, local_df_converged = 1, ow_stage_active = 1, wsncs->wsn_C_0_OW = 1, wsncs->wsn_drift_velocity_OW = -0, new_holdups.gas = 0.262674817115136, new_holdups.liquid = 0.7373251828848639, new_holdups.oil = 0.7373251828848639, new_holdups.water = 0
+MERGEN: Well W1: Seg_idx = 1, local residuals: Rg = 1.3881812366278723e-12, Ro = -1.3881920108869614e-12, Rw = 0
+Seg 1 var 0: D_sigma_o_D_p ana=-0.08940757564544205, num=-0.08940757564790403, relerr=2.461975068257516e-12
+Seg 1 var 0: D_sigma_w_D_p ana=-0.06856753724444392, num=-0.06856753724804321, relerr=3.5992875346835262e-12
+Seg 1 var 0: alpha_l value=0.7373251828848639, avg(prev,next)=0.7373251828707738, absdiff=1.409017347242525e-11
+Seg 1 var 0: D_gas_liq_interfacial_tension_partial_D_seg_vars[0] ana=-8.940757564544205e-05, num=-8.94075756477028e-05, relerr=2.2607512650124617e-15
+MERGEN_DF_BOUNDARY_JACOBIAN: Well W1: Seg_idx = 1, value_mode = GL_OIL_ONLY, jacobian_mode = BOUNDARY_OIL_ONLY_APPEAR_WATER, uses_2d_ift = 1, second_eq = RO, alpha_g = 0.262674817115136, alpha_o = 0.7373251828848639, alpha_w = 0, beta_o = 1, J11 = 0.5230659360007186, J12 = -0.06686672374206201, J21 = -0.5229323926081525, J22 = 0.0670002671346281, detJ = 7.878160876759188e-05, comp_cols_inactive = 0
+MERGEN_DF_SEED_STORE: Well W1: Seg_idx = 1, alpha_g = 0.262674817115136, alpha_o = 0.7373251828848639, alpha_w = 0, rho_avg = 505.9836010702306
+Seg 1 var 0: alpha_water = 0, alpha_oil = 0.7373251828848639, alpha_gas = 0.262674817115136, alpha_liq = 0.7373251828848639, 
+water_velo = -0.0001335433925660906, oil_velo = -0.0001335433925660906, gas_velo = -0.3268757050320587, liquid_velo = -0.0001335433925660906, beta_o = 1, 
+D_alpha_w_D_seg_vars[0] = 6.880346986593011e-16, D_alpha_w_D_seg_vars[1] = 37.1285635199001, D_alpha_w_D_seg_vars[2] = -1.5412671139358736e-13,D_alpha_w_D_seg_vars[3] = -4.3021142204224816e-16, D_alpha_w_D_seg_vars[4] = -5.254251250936832e-21, inner_error = 1.9631923504374384e-12, rho_avg = 505.9836010702306 
+Seg 1 smallJ: detJ=7.878160876759188e-05, J11=0.5230659360007186, J12=-0.06686672374206201, J21=-0.5229323926081525, J22=0.0670002671346281, fallback=0, flow_dir=1, comp_cols_inactive=0, state_upwinded=0, jacobian_mode=BOUNDARY_OIL_ONLY_APPEAR_WATER
+Seg 1 var 0: alpha_g ana=-0.0010454064635522804, num=-0.0010454064636733484, relerr=1.1580958251060395e-10, alpha_o ana=0.0010454064635515923, num=0.0010454064637288596, relerr=1.6956779797354606e-10, beta_o ana=-9.331365141192335e-16, num=0, relerr=0.0009331365141192335
+Seg 1 var 0: IFT defect ana: Rg=0.0006834359496374657, Ro=-2.7921425152662403e-07 ; num-h defect: Rg=0.0006834359496414343, Ro=-2.7921417638653457e-07
+Seg 1 var 0: sigma_gl ana=-8.940757564540178e-05, num=-8.94075756477028e-05, relerr=2.5736251168021282e-11
+Seg 1 var 0: rho_l ana=-0.42472136588269466, num=-0.4247213659027693, relerr=4.726549160187321e-11
+Seg 1 var 0: rho_avg_DF ana=0.518528616511926, num=0.5185286166238257, relerr=2.1580217004253344e-10
+Seg 1 var 0: Vc ana=-0.00023004888191479163, num=-0.00023004888192318385, relerr=3.648012820517722e-11
+Seg 1 var 0: Dhat ana=6.180530659904623, num=6.180530660003569, relerr=1.6009406653152272e-11
+Seg 1 var 0: Ku ana=0, num=0, relerr=0
+Seg 1 var 0: Vsgf ana=-0.011329132340055897, num=-0.011329132341253434, relerr=1.0570419916279343e-10
+Seg 1 var 0: ksi ana=-0.0010454064635522804, num=-0.0010454064636733484, relerr=1.1580958251060395e-10
+Seg 1 var 0: eta ana=0, num=0, relerr=0
+Seg 1 var 0: Kg ana=-0.010062037211690699, num=-0.010062037212765773, relerr=1.0684457181205422e-10
+Seg 1 var 0: C0 full ana=0, full num=0, mixed(num holdup)=0, relerr(full)=0
+Seg 1 var 0: Vd full ana=0.0016872148202702855, full num=0.001687214820439431, mixed(num holdup)=-0.001687214820391705, relerr(full)=1.0025132041198643e-10
+Seg 1 var 0: Vg full ana=0.0030623917554843294, full num=0.003062391755903615, mixed(num holdup)=-0.003062391755605749, relerr(full)=1.3691445553998342e-10
+Seg 1 var 0: Vl full ana=-1.462401519656105e-08, full num=-1.4624051969391871e-08, mixed(num holdup)=1.4624112103364326e-08, relerr(full)=2.5145445939407335e-06
+Seg 1 var 0: sigma_ow ana=-8.940757564550435e-05, num=-8.94075756477028e-05, relerr=2.4589082991565262e-11
+Seg 1 var 0: Vc_ow ana=-0.00011854286499548409, num=-0.00011854286499635158, relerr=7.318004869265336e-12
+Seg 1 var 0: C0_ow ana=-0, num=0, relerr=0
+Seg 1 var 0: Vd_ow ana=-0, num=0, relerr=0
+Seg 1 var 0: Vo ana=-1.462401519656105e-08, num=-1.4624051969391871e-08, relerr=2.5145445939407335e-06
+Seg 1 var 0: Vw ana=-1.462401519656105e-08, num=-1.4624051969391871e-08, relerr=2.5145445939407335e-06
+Seg 1 var 0 ic 0: qc ana=-5.5742729834971256e-11, num=0, relerr=1
+Seg 1 var 0 ic 1: qc ana=8.390904540078736e-07, num=-9.898940334096551e-06, relerr=1.0847656845771316
+Seg 1 var 0 ic 2: qc ana=1.800034823418173e-07, num=0, relerr=1
+Seg 1 ALLVARS checker seed: incoming_prev_df_state (not converged_final_state), flow_dir=1, comp_cols_inactive=0, state_upwinded=0
+Seg 1 ALLVARS p: alpha_g a=-0.0010454064635522804 n=-0.0010454064636733484 r=1.1580958251060395e-10 | alpha_o a=0.0010454064635515923 n=0.0010454064637288596 r=1.6956779797354606e-10 | beta_o a=-9.331365141192335e-16 n=0 r=0.0009331365141192335 | rho_avg a=0.518528616511926 n=0.5185286166238257 r=2.1580217004253344e-10
+Seg 1 ALLVARS p ic 0: qc a=-5.5742729834971256e-11 n=0 r=1
+Seg 1 ALLVARS p ic 1: qc a=8.390904540078736e-07 n=-9.898940334096551e-06 r=1.0847656845771316
+Seg 1 ALLVARS p ic 2: qc a=1.800034823418173e-07 n=0 r=1
+Seg 1 ALLVARS N[0]: alpha_g a=-4.310652556860475 n=-0.10226477142466495 r=0.9762762667425124 | alpha_o a=-32.81791096303962 n=0.10226477142438739 r=1.0031161267863624 | beta_o a=-50.35575127738158 n=0 r=1 | rho_avg a=13613.246824088284 n=62.576852590154886 r=0.9954032382282655
+Seg 1 ALLVARS N[0] ic 0: qc a=-3008056.84580045 n=0 r=1
+Seg 1 ALLVARS N[0] ic 1: qc a=38601.822666000524 n=-1905222.0048249 r=1.020261062788611
+Seg 1 ALLVARS N[0] ic 2: qc a=2969455.023134375 n=2829240.906992927 r=0.04721880447727622
+Seg 1 ALLVARS N[1]: alpha_g a=-0.11100490662343482 n=-0.11100490721949186 r=5.369645829103047e-09 | alpha_o a=0.11100490662358894 n=0.11100490721949186 r=5.368257361554591e-09 | beta_o a=2.0901619737846984e-13 n=0 r=0.20901619737846985 | rho_avg a=67.92503011363675 n=67.92503047847731 r=5.371224082953312e-09
+Seg 1 ALLVARS N[1] ic 0: qc a=1.2486933653646458e-08 n=0 r=1
+Seg 1 ALLVARS N[1] ic 1: qc a=-2969455.0231350935 n=-2969455.0528623583 r=1.0011016918557329e-08
+Seg 1 ALLVARS N[1] ic 2: qc a=2969455.023134393 n=2969455.052833073 r=1.0001390545037304e-08
+Seg 1 ALLVARS N[2]: alpha_g a=0.0014430229409690177 n=0.0014430229552941931 r=9.927198541753719e-09 | alpha_o a=-0.0014430229409685875 n=-0.0014430229550166374 r=9.735153404137941e-09 | beta_o a=5.835343963053809e-16 n=0 r=0.0005835343963053809 | rho_avg a=-0.8830003979245373 n=-0.8830004068727249 r=1.0133843036351272e-08
+Seg 1 ALLVARS N[2] ic 0: qc a=3.485457799955341e-11 n=0 r=1
+Seg 1 ALLVARS N[2] ic 1: qc a=38601.82266620555 n=38601.82298805739 r=8.337736786260739e-09
+Seg 1 ALLVARS N[2] ic 2: qc a=-38601.822666219196 n=-38601.82305332273 r=1.0028115417974528e-08
+Seg 1 ALLVARS q_tot: alpha_g a=-3.311622630802464e-08 n=-3.311622630528979e-08 r=8.258341350746596e-11 | alpha_o a=3.3116226308029893e-08 n=3.3116226286835634e-08 r=6.399962267956536e-10 | beta_o a=7.126874297382316e-21 n=0 r=7.126874297382316e-09 | rho_avg a=2.0264155321121932e-05 n=2.0264155308757867e-05 r=6.101446221784645e-10
+Seg 1 ALLVARS q_tot ic 0: qc a=4.2568537391609384e-16 n=0 r=0.00042568537391609386
+Seg 1 ALLVARS q_tot ic 1: qc a=0.012832810231048132 n=0.012832810752602421 r=4.064224895034845e-08
+Seg 1 ALLVARS q_tot ic 2: qc a=0.9871671897689992 n=0.9871671897453849 r=2.3921310347642792e-11
+Seg_idx = 1, ic = 0, wsncs->wsn_mixture_mass_rate = -3008056.8463361156, C_f = 2.679e-15, Reynolds_number = 23443.108659472102, wsncs->wsn_mixture_viscosity = 0.6206897222484018, fanning_factor = 0.006231169953154893, length = 30.48, scaled_mass_rate = -3008056.8463361156, wsncs->wsn_mixture_density = 505.9836010702306, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 5.6071004168446565e-08, component_rate = 0,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.22372312789802987.
+Seg_idx = 1, ic = 1, wsncs->wsn_mixture_mass_rate = -3008056.8463361156, C_f = 2.679e-15, Reynolds_number = 23443.108659472102, wsncs->wsn_mixture_viscosity = 0.6206897222484018, fanning_factor = 0.006231169953154893, length = 30.48, scaled_mass_rate = -3008056.8463361156, wsncs->wsn_mixture_density = 505.9836010702306, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 5.6071004168446565e-08, component_rate = -38601.823210441005,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.22372312789802987.
+Seg_idx = 1, ic = 2, wsncs->wsn_mixture_mass_rate = -3008056.8463361156, C_f = 2.679e-15, Reynolds_number = 23443.108659472102, wsncs->wsn_mixture_viscosity = 0.6206897222484018, fanning_factor = 0.006231169953154893, length = 30.48, scaled_mass_rate = -3008056.8463361156, wsncs->wsn_mixture_density = 505.9836010702306, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 5.6071004168446565e-08, component_rate = -2969455.0231256746,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.22372312789802987.
+Total CPU image size (max over the processes): 1994.930MB.
+ Newton # =  0, |F| =  1.05e+03, dp =  3.15e-03, dN =  8.45e-04, MaxNorm =  3.15e-03, its = 15. (0)
+MERGEN_DF_PHASE_THRESHOLD: Well W1: Seg_idx = 1, water_abs_eps = 1e-05, oil_in_before = 8.08385436576546e-09, water_in_before = 4.5068304327996386e-11, oil_in_after = 8.128922670093457e-09, water_in_after = 0, action = FOLD_WATER_TO_OIL
+MERGEN_DF_NEWTON_ALPHAO_START: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, alpha_g0 = 0.262674817115136, alpha_o0 = 0.7373251828848639, alpha_w0 = 0, beta_o0 = 1, beta_flow = 1, beta_input = 0.994455808456168, beta_seed = 1, seed_from_prev_df = 1, seed_generation = 31, seed_reset = 0, jsg_in = 2.2775912614235664e-06, jso_in = 8.128922670093457e-09, jsw_in = 0, flux_scale = 2.2857201840936598e-06, Rg0 = 0.04108135250173912, Ro0 = -0.04108135250173911, Rw0 = -0, norm0 = 17973.0453393309, abs0 = 0.04108135250173912
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 1, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 0.262674817115136, alpha_o = 0.7373251828848639, alpha_w = 0, beta_o = 1, F1 = 0.04108135250173912, F2 = 0, Rg = 0.04108135250173912, Ro = -0.04108135250173911, Rw = -0, norm = 17973.0453393309, trial_norm = 7074.377853665006, abs_norm = 0.04108135250173912, trial_abs = 0.016170048250027286, detJ = 0.3260633251578136, J11 = 0.3260633251578136, J12 = 0, J21 = 0, J22 = 1, d_alpha_g = -0.12599194491393925, d_alpha_o = 0, step = 1, vg = 0.15640490605154853, vo = -0.05571672489481679, vw = -0.05571672489481679, C0 = 1.2, Vd = 0.1564021631873276, C0_OW = 1, Vd_OW = 0
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 2, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 0.13668287220119676, alpha_o = 0.8633171277988032, alpha_w = 0, beta_o = 1, F1 = 0.016170048250027286, F2 = 0, Rg = 0.016170048250027286, Ro = -0.016170048250027286, Rw = -0, norm = 7074.377853665006, trial_norm = 0.9964435489357171, abs_norm = 0.016170048250027286, trial_abs = 2.277591132112287e-06, detJ = 0.10628991910222513, J11 = 0.10628991910222513, J12 = 0, J21 = 0, J22 = 1, d_alpha_g = -0.1521315321961589, d_alpha_o = 0, step = 1, vg = 0.11832006147400163, vo = -0.018730127783209066, vw = -0.018730127783209066, C0 = 1.2, Vd = 0.11831731860978072, C0_OW = 1, Vd_OW = 0
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 3, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, F1 = -2.277591132112287e-06, F2 = 0, Rg = -2.277591132112287e-06, Ro = 2.277591132112287e-06, Rw = 0, norm = 0.9964435489357171, trial_norm = 9.405526906778981e-06, abs_norm = 2.277591132112287e-06, trial_abs = 2.1498402692860723e-11, detJ = 0.1293112059586995, J11 = 0.1293112059586995, J12 = 0, J21 = 0, J22 = 1, d_alpha_g = 1.7613254127718237e-05, d_alpha_o = 0, step = 1, vg = 0.12931127942826745, vo = 2.285720054784666e-06, vw = 2.285720054784666e-06, C0 = 1.2, Vd = 0.12930853656404653, C0_OW = 1, Vd_OW = 0
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 4, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 1.7613255127718236e-05, alpha_o = 0.9999823867448723, alpha_w = 0, beta_o = 1, F1 = -2.1498402692860723e-11, F2 = 0, Rg = -2.1498402692860723e-11, Ro = 2.1498402693150236e-11, Rw = 0, norm = 9.405526906778981e-06, trial_norm = 9.26439895343279e-16, abs_norm = 2.1498402692860723e-11, trial_abs = 2.117582368135751e-21, detJ = 0.12930869131283063, J11 = 0.12930869131283063, J12 = 0, J21 = 0, J22 = 1, d_alpha_g = 1.6625644010927786e-10, d_alpha_o = 0, step = 1, vg = 0.12930998537780952, vo = 8.150564630760883e-09, vw = 8.150564630760883e-09, C0 = 1.2, Vd = 0.1293072425135886, C0_OW = 1, Vd_OW = 0
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 5, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 1.7613421384158346e-05, alpha_o = 0.9999823865786158, alpha_w = 0, beta_o = 1, F1 = -2.117582368135751e-21, F2 = 0, Rg = -2.117582368135751e-21, Ro = 2.721424215299461e-21, Rw = 0, norm = 9.26439895343279e-16, abs_norm = 2.117582368135751e-21, detJ = 0.12930869131283063, step = 1, reason = CONVERGED
+MERGEN_DF_NEWTON_ALPHAO_FINAL: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, converged = 1, step_failed = 0, it = 5, alpha_g = 1.7613421384158346e-05, alpha_o = 0.9999823865786158, alpha_w = 0, beta_o = 1, Rg = -2.117582368135751e-21, Ro = 2.721424215299461e-21, Rw = 0, res_norm = 3.44823213334858e-21, norm_initial = 17973.0453393309, norm_best = 9.26439895343279e-16, abs_initial = 0.04108135250173912, abs_best = 2.117582368135751e-21, detJ_last = 0.12930869131283063, beta_flow = 1, beta_input = 0.994455808456168, beta_seed = 1, seed_reset = 0
+MERGEN_DF_SEED_ONLY: Well W1: Seg_idx = 1, seed_from_prev_df = 1, seed_generation = 31, seed_alpha_g = 0.262674817115136, seed_alpha_o = 0.7373251828848639, seed_alpha_w = 0, flash_alpha_g = 0.9964436055092557, flash_alpha_o = 0.0035366771584820615, flash_alpha_w = 1.9717332262114572e-05, j_input_source = FLASH_PHASE_S_CURRENT_JMIX
+MERGEN: Well W1: it = 5, Seg_idx = 1, error = 3.44823213334858e-21, average_volumetric_mixture_velocity = -2.28572018409366e-06, element_status->avg_xi = 140.1721606883922, seg.wsn->pipe_props.area = 7.296587699003967, wsncs->wsn_mixture_molar_rate = -201.98465663322366, wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.12930724250137354, gas_liq_interfacial_tension = 0.0041404186203751955, gas_density = 138.4611367299727, liquid_density = 617.634042509922, diametr_dimless = 3247.6817628510644, bubble_rise_velocity = 0.08451538337524181, ksi = 1.7613421384158346e-05, Kut_number = 3.2, flooding_velocity = 0.5711989631347034, K_g = 1.2750000000000001, element_status->phase_S[PHASE_GAS] = 0.9964436055092557, seg.wsn->pipe_props.diameter = 3.048, phase_S_WAT = 1.9717332262114572e-05, phase_S_OIL = 0.0035366771584820615, phase_S_GAS = 0.9964436055092557, jsg_in = -2.2775912614235664e-06, jso_in = -8.08385436576546e-09, jsw_in = -4.5068304327996386e-11, phase_inputs_from_lagged_map = 0, lagged_phase_input_regularized = 0, lagged_lambda = 0, lagged_det = 0, gas_root_sign_mismatch = 0, vg_floor = -0.13113541420483396, local_df_converged = 1, ow_stage_active = 1, wsncs->wsn_C_0_OW = 1, wsncs->wsn_drift_velocity_OW = -0, new_holdups.gas = 1.7613421384158346e-05, new_holdups.liquid = 0.9999823865786158, new_holdups.oil = 0.9999823865786158, new_holdups.water = 0
+MERGEN: Well W1: Seg_idx = 1, local residuals: Rg = 2.117582368135751e-21, Ro = -4.506830433071734e-11, Rw = 4.5068304327996386e-11
+Seg 1 var 0: D_sigma_o_D_p ana=-0.05243962881158094, num=-0.052439628811740135, relerr=1.5919210394343963e-13
+Seg 1 var 0: D_sigma_w_D_p ana=-0.04206322224970725, num=-0.042063222245758425, relerr=3.948827376198949e-12
+Seg 1 var 0: alpha_l value=0.9999823865786158, avg(prev,next)=0.9999823865786153, absdiff=5.551115123125783e-16
+Seg 1 var 0: D_gas_liq_interfacial_tension_partial_D_seg_vars[0] ana=-5.243962881158095e-05, num=-5.243962881203851e-05, relerr=4.57560421843195e-16
+MERGEN_DF_BOUNDARY_JACOBIAN: Well W1: Seg_idx = 1, value_mode = GL_OIL_ONLY, jacobian_mode = BOUNDARY_OIL_ONLY_APPEAR_WATER, uses_2d_ift = 1, second_eq = RO, alpha_g = 1.7613421384158346e-05, alpha_o = 0.9999823865786158, alpha_w = 0, beta_o = 1, J11 = 0.12930275903157057, J12 = -5.9322568761410435e-06, J21 = -0.12930275090250473, J22 = 5.940385941991802e-06, detJ = 1.0511588665591128e-09, comp_cols_inactive = 0
+MERGEN_DF_SEED_STORE: Well W1: Seg_idx = 1, alpha_g = 1.7613421384158346e-05, alpha_o = 0.9999823865786158, alpha_w = 0, rho_avg = 617.6256026356166
+Seg 1 var 0: alpha_water = 0, alpha_oil = 0.9999823865786158, alpha_gas = 1.7613421384158346e-05, alpha_liq = 0.9999823865786158, 
+water_velo = -8.129065850758467e-09, oil_velo = -8.129065850758467e-09, gas_velo = -0.12930998536559446, liquid_velo = -8.129065850758467e-09, beta_o = 1, 
+D_alpha_w_D_seg_vars[0] = -9.072855771660509e-17, D_alpha_w_D_seg_vars[1] = -4.2204870105483e-14, D_alpha_w_D_seg_vars[2] = 3.351798141338139e-14,D_alpha_w_D_seg_vars[3] = -4.711016728731535e-16, D_alpha_w_D_seg_vars[4] = -5.510235195508922e-17, inner_error = 3.44823213334858e-21, rho_avg = 617.6256026356166 
+Seg 1 smallJ: detJ=1.0511588665591128e-09, J11=0.12930275903157057, J12=-5.9322568761410435e-06, J21=-0.12930275090250473, J22=5.940385941991802e-06, fallback=0, flow_dir=1, comp_cols_inactive=0, state_upwinded=0, jacobian_mode=BOUNDARY_OIL_ONLY_APPEAR_WATER
+Seg 1 var 0: alpha_g ana=-2.9893256656197216e-08, num=-2.9893256654281723e-08, relerr=6.407773633872681e-11, alpha_o ana=2.9893256746925773e-08, num=2.989325453839342e-08, relerr=7.388062033098132e-08, beta_o ana=9.073015902128282e-17, num=0, relerr=9.073015902128283e-05
+Seg 1 var 0: IFT defect ana: Rg=7.730993161485266e-09, Ro=-4.860081292558491e-16 ; num-h defect: Rg=7.73099316125066e-09, Ro=-4.862688913265115e-16
+Seg 1 var 0: sigma_gl ana=-5.243962881158501e-05, num=-5.243962881203851e-05, relerr=8.647938095097006e-12
+Seg 1 var 0: rho_l ana=-0.28065436262845217, num=-0.28065436259794296, relerr=1.0870740075701391e-10
+Seg 1 var 0: rho_avg_DF ana=-0.28062255554885013, num=-0.2806225555218589, relerr=9.618343943000388e-11
+Seg 1 var 0: Vc ana=-0.00029216910636125254, num=-0.0002921691063667575, relerr=1.8841767321477734e-11
+Seg 1 var 0: Dhat ana=17.202670121014766, num=17.202670122742347, relerr=1.0042520265619077e-10
+Seg 1 var 0: Ku ana=0, num=0, relerr=0
+Seg 1 var 0: Vsgf ana=-0.0035729113273728886, num=-0.003572911327409667, relerr=1.0293652073844572e-11
+Seg 1 var 0: ksi ana=-2.9893256656197216e-08, num=-2.9893256654281723e-08, relerr=6.407773633872681e-11
+Seg 1 var 0: eta ana=0, num=0, relerr=0
+Seg 1 var 0: Kg ana=0, num=0, relerr=0
+Seg 1 var 0: C0 full ana=0, full num=0, mixed(num holdup)=0, relerr(full)=0
+Seg 1 var 0: Vd full ana=0.0004470156837767984, full num=0.0004470156837882433, mixed(num holdup)=-0.00044701568377676794, relerr(full)=2.5602887679187542e-11
+Seg 1 var 0: Vg full ana=0.0004470297588388166, full num=0.0004470297588488048, mixed(num holdup)=-0.0004470297588387861, relerr(full)=2.2343506928362998e-11
+Seg 1 var 0: Vl full ana=-1.0001679090770053e-11, full num=-1.0001679067334632e-11, mixed(num holdup)=1.0001678842537547e-11, relerr(full)=2.3431486646028225e-09
+Seg 1 var 0: sigma_ow ana=-5.243962881157612e-05, num=-5.243962881203851e-05, relerr=8.817475103954325e-12
+Seg 1 var 0: Vc_ow ana=-0.0001845746742580229, num=-0.00018457467426680196, relerr=4.756370870506405e-11
+Seg 1 var 0: C0_ow ana=0, num=0, relerr=0
+Seg 1 var 0: Vd_ow ana=-0, num=0, relerr=0
+Seg 1 var 0: Vo ana=-1.0001679090770053e-11, num=-1.0001679067334632e-11, relerr=2.3431486646028225e-09
+Seg 1 var 0: Vw ana=-1.0001679090770053e-11, num=-1.0001679067334632e-11, relerr=2.3431486646028225e-09
+Seg 1 var 0 ic 0: qc ana=4.4979614967162485e-16, num=0, relerr=0.00044979614967162484
+Seg 1 var 0 ic 1: qc ana=1.9058205109743608e-05, num=1.905821256364959e-05, relerr=3.911125430643531e-07
+Seg 1 var 0 ic 2: qc ana=-1.0287567306769586e-05, num=-1.028759299970261e-05, relerr=2.4974678746449478e-06
+Seg 1 ALLVARS checker seed: incoming_prev_df_state (not converged_final_state), flow_dir=1, comp_cols_inactive=0, state_upwinded=0
+Seg 1 ALLVARS p: alpha_g a=-2.9893256656197216e-08 n=-2.9893256654281723e-08 r=6.407773633872681e-11 | alpha_o a=2.9893256746925773e-08 n=2.989325453839342e-08 r=7.388062033098132e-08 | beta_o a=9.073015902128282e-17 n=0 r=9.073015902128283e-05 | rho_avg a=-0.28062255554885013 n=-0.2806225555218589 r=9.618343943000388e-11
+Seg 1 ALLVARS p ic 0: qc a=4.4979614967162485e-16 n=0 r=0.00044979614967162484
+Seg 1 ALLVARS p ic 1: qc a=1.9058205109743608e-05 n=1.905821256364959e-05 r=3.911125430643531e-07
+Seg 1 ALLVARS p ic 2: qc a=-1.0287567306769586e-05 n=-1.028759299970261e-05 r=2.4974678746449478e-06
+Seg 1 ALLVARS N[0]: alpha_g a=-1.7613278177481137e-05 n=-1.7613278353613958e-05 r=1.000000209788466e-08 | alpha_o a=1.7613278219686007e-05 n=1.761327805827051e-05 r=9.164421049508861e-09 | beta_o a=4.2205614862086337e-14 n=0 r=0.042205614862086335 | rho_avg a=0.008439805669853181 n=0.008439805583293492 r=1.0256123583565184e-08
+Seg 1 ALLVARS N[0] ic 0: qc a=2.092349812297628e-13 n=0 r=0.2092349812297628
+Seg 1 ALLVARS N[0] ic 1: qc a=-106.49108026997645 n=-106.49108133422347 r=9.99376663766926e-09
+Seg 1 ALLVARS N[0] ic 2: qc a=179.50667710795298 n=179.50667890318073 r=1.0000896662923894e-08
+Seg 1 ALLVARS N[1]: alpha_g a=-2.085693421231134e-05 n=-2.085693442086011e-05 r=9.999013621561163e-09 | alpha_o a=2.0856934178793358e-05 n=2.0856934512814007e-05 r=1.6014848650950213e-08 | beta_o a=-3.35185726215391e-14 n=0 r=0.0335185726215391 | rho_avg a=0.009994077783897272 n=0.009994078027375508 r=2.4362250841937068e-08
+Seg 1 ALLVARS N[1] ic 0: qc a=-1.6616883772797795e-13 n=0 r=0.16616883772797794
+Seg 1 ALLVARS N[1] ic 1: qc a=-199.30517210509797 n=-199.3051740970597 r=9.994530988430852e-09
+Seg 1 ALLVARS N[1] ic 2: qc a=199.29523502785997 n=199.29523702089114 r=1.0000395353750915e-08
+Seg 1 ALLVARS N[2]: alpha_g a=2.812955186114679e-07 n=2.812955214422032e-07 r=1.0063207849656104e-08 | alpha_o a=-2.8129551814036623e-07 n=-2.81295542414739e-07 r=8.629490726358563e-08 | beta_o a=4.711100098740085e-16 n=0 r=0.0004711100098740085 | rho_avg a=-0.00013478919120070123 n=-0.0001347888201053138 r=2.7531539000429397e-06
+Seg 1 ALLVARS N[2] ic 0: qc a=2.335534961594832e-15 n=0 r=0.002335534961594832
+Seg 1 ALLVARS N[2] ic 1: qc a=2.679484528172877 n=2.679484556651346 r=1.0628338515969946e-08
+Seg 1 ALLVARS N[2] ic 2: qc a=-2.6894216053675994 n=-2.689421632169342 r=9.96561576008315e-09
+Seg 1 ALLVARS q_tot: alpha_g a=-8.720080195827881e-08 n=-8.720080195227619e-08 r=6.883673039610069e-11 | alpha_o a=8.720080201338116e-08 n=8.720090174201443e-08 r=1.1436651602822051e-06 | beta_o a=5.5103326907271884e-17 n=0 r=5.510332690727189e-05 | rho_avg a=4.178426164141847e-05 n=4.178421228927834e-05 r=1.1811179183986525e-06
+Seg 1 ALLVARS q_tot ic 0: qc a=2.7317557306120116e-16 n=0 r=0.00027317557306120115
+Seg 1 ALLVARS q_tot ic 1: qc a=0.013265782524006328 n=0.01326578312399326 r=4.5228157739148194e-08
+Seg 1 ALLVARS q_tot ic 2: qc a=0.9866850202872406 n=0.9866850201814844 r=1.0718332539296457e-10
+Seg_idx = 1, ic = 0, wsncs->wsn_mixture_mass_rate = -201.97471955602975, C_f = 2.679e-15, Reynolds_number = 1.5551430980849428, wsncs->wsn_mixture_viscosity = 0.6282469254365775, fanning_factor = 10.28844227885071, length = 30.48, scaled_mass_rate = -201.97471955602975, wsncs->wsn_mixture_density = 617.6256026356166, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 3.419412244525726e-13, component_rate = 0,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.12930724250137354.
+Seg_idx = 1, ic = 1, wsncs->wsn_mixture_mass_rate = -201.97471955602975, C_f = 2.679e-15, Reynolds_number = 1.5551430980849428, wsncs->wsn_mixture_viscosity = 0.6282469254365775, fanning_factor = 10.28844227885071, length = 30.48, scaled_mass_rate = -201.97471955602975, wsncs->wsn_mixture_density = 617.6256026356166, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 3.419412244525726e-13, component_rate = -2.6794845281737305,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.12930724250137354.
+Seg_idx = 1, ic = 2, wsncs->wsn_mixture_mass_rate = -201.97471955602975, C_f = 2.679e-15, Reynolds_number = 1.5551430980849428, wsncs->wsn_mixture_viscosity = 0.6282469254365775, fanning_factor = 10.28844227885071, length = 30.48, scaled_mass_rate = -201.97471955602975, wsncs->wsn_mixture_density = 617.6256026356166, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 3.419412244525726e-13, component_rate = -199.29523502785602,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.12930724250137354.
+MERGEN_DF_NEWTON_ALPHAO_START: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, alpha_g0 = 1.7613421384158346e-05, alpha_o0 = 0.9999823865786158, alpha_w0 = 0, beta_o0 = 1, beta_flow = 1, beta_input = 1, beta_seed = 1, seed_from_prev_df = 1, seed_generation = 32, seed_reset = 0, jsg_in = 0.0007058318679839678, jso_in = 6.749538973312918e-05, jsw_in = 0, flux_scale = 0.000773327257717097, Rg0 = -0.0007027902136739396, Ro0 = 0.0007027902136739397, Rw0 = 0, norm0 = 0.9087875885153893, abs0 = 0.0007027902136739396
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 1, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 1.7613421384158346e-05, alpha_o = 0.9999823865786158, alpha_w = 0, beta_o = 1, F1 = -0.0007027902136739396, F2 = 0, Rg = -0.0007027902136739396, Ro = 0.0007027902136739397, Rw = 0, norm = 0.9087875885153893, trial_norm = 0.0012738922845903968, abs_norm = 0.0007027902136739396, trial_abs = 9.851356270692592e-07, detJ = 0.1726885342435068, J11 = 0.1726885342435068, J12 = 0, J21 = 0, J22 = 1, d_alpha_g = 0.004069698180904937, d_alpha_o = 0, step = 1, vg = 0.1726895782306048, vo = 0.0007702991710109597, vw = 0.0007702991710109597, C0 = 1.2, Vd = 0.17176158552134427, C0_OW = 1, Vd_OW = 0
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 2, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 0.004087311602289095, alpha_o = 0.9959126883977109, alpha_w = 0, beta_o = 1, F1 = -9.851356270692592e-07, F2 = 0, Rg = -9.851356270692592e-07, Ro = 9.851356270693947e-07, Rw = 0, norm = 0.0012738922845903968, trial_norm = 2.5348108025857514e-09, abs_norm = 9.851356270692592e-07, trial_abs = 1.9602382867953128e-12, detJ = 0.17220355703692378, J11 = 0.17220355703692378, J12 = 0, J21 = 0, J22 = 1, d_alpha_g = 5.72076235834099e-06, d_alpha_o = 0, step = 1, vg = 0.17244751585911625, vo = 6.876157534489746e-05, vw = 6.876157534489746e-05, C0 = 1.2, Vd = 0.17151952314985572, C0_OW = 1, Vd_OW = 0
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 3, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 0.004093032364647436, alpha_o = 0.9959069676353526, alpha_w = 0, beta_o = 1, F1 = -1.9602382867953128e-12, F2 = 0, Rg = -1.9602382867953128e-12, Ro = 1.9602384494256386e-12, Rw = 0, norm = 2.5348108025857514e-09, trial_norm = 2.8039931650311323e-16, abs_norm = 1.9602382867953128e-12, trial_abs = 2.168404344971009e-19, detJ = 0.17220287172839727, J11 = 0.17220287172839727, J12 = 0, J21 = 0, J22 = 1, d_alpha_g = 1.1383307764385314e-11, d_alpha_o = 0, step = 1, vg = 0.17244717440306095, vo = 6.77727879077163e-05, vw = 6.77727879077163e-05, C0 = 1.2, Vd = 0.17151918169380043, C0_OW = 1, Vd_OW = 0
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 4, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 0.004093032376030744, alpha_o = 0.9959069676239692, alpha_w = 0, beta_o = 1, F1 = -2.168404344971009e-19, F2 = 0, Rg = -2.168404344971009e-19, Ro = 2.981555974335137e-19, Rw = 0, norm = 2.8039931650311323e-16, abs_norm = 2.168404344971009e-19, detJ = 0.17220287172839727, step = 1, reason = CONVERGED
+MERGEN_DF_NEWTON_ALPHAO_FINAL: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, converged = 1, step_failed = 0, it = 4, alpha_g = 0.004093032376030744, alpha_o = 0.9959069676239692, alpha_w = 0, beta_o = 1, Rg = -2.168404344971009e-19, Ro = 2.981555974335137e-19, Rw = 0, res_norm = 3.686685968642122e-19, norm_initial = 0.9087875885153893, norm_best = 2.8039931650311323e-16, abs_initial = 0.0007027902136739396, abs_best = 2.168404344971009e-19, detJ_last = 0.17220287172839727, beta_flow = 1, beta_input = 1, beta_seed = 1, seed_reset = 0
+MERGEN_DF_SEED_ONLY: Well W1: Seg_idx = 1, seed_from_prev_df = 1, seed_generation = 32, seed_alpha_g = 1.7613421384158346e-05, seed_alpha_o = 0.9999823865786158, seed_alpha_w = 0, flash_alpha_g = 0.9127207930929795, flash_alpha_o = 0.08727920690702037, flash_alpha_w = 0, j_input_source = FLASH_PHASE_S_CURRENT_JMIX
+MERGEN: Well W1: it = 4, Seg_idx = 1, error = 3.686685968642122e-19, average_volumetric_mixture_velocity = 0.0007733272577170971, element_status->avg_xi = 108.48071423437712, seg.wsn->pipe_props.area = 7.296587699003967, wsncs->wsn_mixture_molar_rate = 52887.0573296862, wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0.17151918169312097, gas_liq_interfacial_tension = 0.011764904841145955, gas_density = 55.11641659066524, liquid_density = 666.5369316803766, diametr_dimless = 2176.3325634593707, bubble_rise_velocity = 0.11226315653115518, ksi = 0.004093032376030744, Kut_number = 3.2, flooding_velocity = 1.2492773022820522, K_g = 1.2750000000000001, element_status->phase_S[PHASE_GAS] = 0.9127207930929795, seg.wsn->pipe_props.diameter = 3.048, phase_S_WAT = 0, phase_S_OIL = 0.08727920690702037, phase_S_GAS = 0.9127207930929795, jsg_in = 0.0007058318679839678, jso_in = 6.749538973312918e-05, jsw_in = 0, phase_inputs_from_lagged_map = 0, lagged_phase_input_regularized = 0, lagged_lambda = 0, lagged_det = 0, gas_root_sign_mismatch = 0, vg_floor = 0.1726906222018687, local_df_converged = 1, ow_stage_active = 1, wsncs->wsn_C_0_OW = 1, wsncs->wsn_drift_velocity_OW = 0, new_holdups.gas = 0.004093032376030744, new_holdups.liquid = 0.9959069676239692, new_holdups.oil = 0.9959069676239692, new_holdups.water = 0
+MERGEN: Well W1: Seg_idx = 1, local residuals: Rg = -2.168404344971009e-19, Ro = 2.981555974335137e-19, Rw = 0
+Seg 1 var 0: D_sigma_o_D_p ana=-0.08911334084028516, num=-0.08911334084427125, relerr=3.986089236462931e-12
+Seg 1 var 0: D_sigma_w_D_p ana=-0.06835675473657339, num=-0.06835675473837455, relerr=1.8011564462128149e-12
+Seg 1 var 0: alpha_l value=0.9959069676239692, avg(prev,next)=0.9959069676233108, absdiff=6.584732759051803e-13
+Seg 1 var 0: D_gas_liq_interfacial_tension_partial_D_seg_vars[0] ana=-8.911334084028517e-05, num=-8.911334084451411e-05, relerr=4.228944126306866e-15
+MERGEN_DF_BOUNDARY_JACOBIAN: Well W1: Seg_idx = 1, value_mode = GL_OIL_ONLY, jacobian_mode = BOUNDARY_OIL_ONLY_APPEAR_WATER, uses_2d_ift = 1, second_eq = RO, alpha_g = 0.004093032376030744, alpha_o = 0.9959069676239692, alpha_w = 0, beta_o = 1, J11 = 0.1716272921280709, J12 = -0.0005755795990434601, J21 = -0.1715595193421307, J22 = 0.0006433523849836566, detJ = 1.1670668363848833e-05, comp_cols_inactive = 0
+MERGEN_DF_SEED_STORE: Well W1: Seg_idx = 1, alpha_g = 0.004093032376030744, alpha_o = 0.9959069676239692, alpha_w = 0, rho_avg = 664.034367716745
+Seg 1 var 0: alpha_water = 0, alpha_oil = 0.9959069676239692, alpha_gas = 0.004093032376030744, alpha_liq = 0.9959069676239692, 
+water_velo = 6.777278594019651e-05, oil_velo = 6.777278594019651e-05, gas_velo = 0.1724471744023815, liquid_velo = 6.777278594019651e-05, beta_o = 1, 
+D_alpha_w_D_seg_vars[0] = 4.9398961483870796e-17, D_alpha_w_D_seg_vars[1] = 0.6431321661800646, D_alpha_w_D_seg_vars[2] = 1.2928026704717155e-15,D_alpha_w_D_seg_vars[3] = -1.2928026704717155e-15, D_alpha_w_D_seg_vars[4] = 2.1864037951001628e-20, inner_error = 3.686685968642122e-19, rho_avg = 664.034367716745 
+Seg 1 smallJ: detJ=1.1670668363848833e-05, J11=0.1716272921280709, J12=-0.0005755795990434601, J21=-0.1715595193421307, J22=0.0006433523849836566, fallback=0, flow_dir=2, comp_cols_inactive=0, state_upwinded=0, jacobian_mode=BOUNDARY_OIL_ONLY_APPEAR_WATER
+Seg 1 var 0: alpha_g ana=-4.9902747895598016e-05, num=-4.990274790487095e-05, relerr=1.8582017273791429e-10, alpha_o ana=4.990274789554862e-05, num=4.990274787841642e-05, relerr=3.433116919180905e-10, beta_o ana=-4.9607710698373604e-17, num=0, relerr=4.960771069837361e-05
+Seg 1 var 0: IFT defect ana: Rg=-1.1858461261560205e-20, Ro=1.0164395367051604e-20 ; num-h defect: Rg=-1.5816392114195374e-15, Ro=1.5798502778349363e-15
+Seg 1 var 0: sigma_gl ana=-8.911334084028303e-05, num=-8.911334084451411e-05, relerr=4.7479820479180184e-11
+Seg 1 var 0: rho_l ana=-0.4254893760400775, num=-0.42548937597075565, relerr=1.6292270846700384e-10
+Seg 1 var 0: rho_avg_DF ana=-0.3902446338629718, num=-0.39024463376335916, relerr=2.552569409467467e-10
+Seg 1 var 0: Vc ana=-0.00022983414076688325, num=-0.00022983414077470954, relerr=3.4051887376923114e-11
+Seg 1 var 0: Dhat ana=6.184238598168425, num=6.184238598734737, relerr=9.157349305366082e-11
+Seg 1 var 0: Ku ana=0, num=0, relerr=0
+Seg 1 var 0: Vsgf ana=-0.011239819267011286, num=-0.011239819268205054, relerr=1.0620876357016713e-10
+Seg 1 var 0: ksi ana=-4.9902747895598016e-05, num=-4.990274790487095e-05, relerr=1.8582017273791429e-10
+Seg 1 var 0: eta ana=0, num=0, relerr=0
+Seg 1 var 0: Kg ana=0, num=0, relerr=0
+Seg 1 var 0: C0 full ana=0, full num=0, mixed(num holdup)=0, relerr(full)=0
+Seg 1 var 0: Vd full ana=-0.00034985877148449633, full num=-0.0003498587714950707, mixed(num holdup)=-0.0003498587714839498, relerr(full)=3.022472860517086e-11
+Seg 1 var 0: Vg full ana=-0.0003618389124946473, full num=-0.00036183891249930156, mixed(num holdup)=-0.00036183891249410075, relerr(full)=1.286280420725827e-11
+Seg 1 var 0: Vl full ana=1.0018341718526308e-07, full num=1.0018341733454561e-07, mixed(num holdup)=1.0018341878804907e-07, relerr(full)=1.490092204866424e-09
+Seg 1 var 0: sigma_ow ana=-8.911334084028847e-05, num=-8.911334084451411e-05, relerr=4.741868355102657e-11
+Seg 1 var 0: Vc_ow ana=-0.00011842367538441322, num=-0.00011842367539371956, relerr=7.858516622017432e-11
+Seg 1 var 0: C0_ow ana=-0, num=0, relerr=0
+Seg 1 var 0: Vd_ow ana=0, num=0, relerr=0
+Seg 1 var 0: Vo ana=1.0018341718526308e-07, num=1.0018341733454561e-07, relerr=1.490092204866424e-09
+Seg 1 var 0: Vw ana=1.0018341718526308e-07, num=1.0018341733454561e-07, relerr=1.490092204866424e-09
+Seg 1 var 0 ic 0: qc ana=2.0311266061702206e-12, num=0, relerr=1
+Seg 1 var 0 ic 1: qc ana=3.595346242946107e-12, num=6.184563972055912e-08, relerr=0.9999418658088235
+Seg 1 var 0 ic 2: qc ana=-2.7000623958883807e-13, num=3.637978807091713e-09, relerr=1.00007421875
+Seg 1 ALLVARS checker seed: incoming_prev_df_state (not converged_final_state), flow_dir=2, comp_cols_inactive=0, state_upwinded=0
+Seg 1 ALLVARS p: alpha_g a=-4.9902747895598016e-05 n=-4.990274790487095e-05 r=1.8582017273791429e-10 | alpha_o a=4.990274789554862e-05 n=4.990274787841642e-05 r=3.433116919180905e-10 | beta_o a=-4.9607710698373604e-17 n=0 r=4.960771069837361e-05 | rho_avg a=-0.3902446338629718 n=-0.39024463376335916 r=2.552569409467467e-10
+Seg 1 ALLVARS p ic 0: qc a=2.0311266061702206e-12 n=0 r=1
+Seg 1 ALLVARS p ic 1: qc a=3.595346242946107e-12 n=6.184563972055912e-08 r=0.9999418658088235
+Seg 1 ALLVARS p ic 2: qc a=-2.7000623958883807e-13 n=3.637978807091713e-09 r=1.00007421875
+Seg 1 ALLVARS N[0]: alpha_g a=-0.004189271711353556 n=-0.002039634195111044 r=0.5131291700217657 | alpha_o a=-0.6389428944687111 n=0.0020396341948725194 r=1.0031922010754475 | beta_o a=-0.6457753455771543 n=0 r=1 | rho_avg a=192.80436976095086 n=1.2470741899051063 r=0.9935319194712687
+Seg 1 ALLVARS N[0] ic 0: qc a=26443.528664843085 n=0 r=1
+Seg 1 ALLVARS N[0] ic 1: qc a=-13221.764332421431 n=3854.814539081417 r=1.2915506918867798
+Seg 1 ALLVARS N[0] ic 2: qc a=-13221.764332421559 n=-11983.07273165483 r=0.09368580241059735
+Seg 1 ALLVARS N[1]: alpha_g a=-0.0023593144979461465 n=-0.002359314503798393 r=2.4804860179770327e-09 | alpha_o a=0.0023593144979448537 n=0.0023593145037636987 r=2.4663286571378053e-09 | beta_o a=-1.2977666798757008e-15 n=0 r=0.0012977666798757008 | rho_avg a=1.4425332855932391 n=1.4425332892642473 r=2.5448342796936667e-09
+Seg 1 ALLVARS N[1] ic 0: qc a=5.3155892788968365e-11 n=0 r=1
+Seg 1 ALLVARS N[1] ic 1: qc a=13221.764332421597 n=13221.76436544396 r=2.4975761177363785e-09
+Seg 1 ALLVARS N[1] ic 2: qc a=-13221.764332421551 n=-13221.76436546215 r=2.498955311028671e-09
+Seg 1 ALLVARS N[2]: alpha_g a=0.0023593144979461465 n=0.0023593145038851293 r=2.5172493123326016e-09 | alpha_o a=-0.0023593144979448537 n=-0.0023593145037636987 r=2.4663286571378053e-09 | beta_o a=1.2977666798757008e-15 n=0 r=0.0012977666798757008 | rho_avg a=-1.4425332855932391 n=-1.4425332892642473 r=2.5448342796936667e-09
+Seg 1 ALLVARS N[2] ic 0: qc a=-5.3155892788968365e-11 n=0 r=1
+Seg 1 ALLVARS N[2] ic 1: qc a=-13221.764332421597 n=-13221.76436538939 r=2.4934488560138106e-09
+Seg 1 ALLVARS N[2] ic 2: qc a=13221.764332421551 n=13221.76436546215 r=2.498955311028671e-09
+Seg 1 ALLVARS q_tot: alpha_g a=7.708468163035979e-08 n=7.70846816312604e-08 r=1.1683356045708938e-11 | alpha_o a=-7.708468163038165e-08 n=-7.708468145905762e-08 r=2.222543184869338e-09 | beta_o a=-2.1950715966191536e-20 n=0 r=2.1950715966191535e-08 | rho_avg a=-4.7131155747954525e-05 n=-4.713115584570746e-05 r=2.0740619082755884e-09
+Seg 1 ALLVARS q_tot ic 0: qc a=8.989790041455558e-16 n=0 r=0.0008989790041455558
+Seg 1 ALLVARS q_tot ic 1: qc a=0.4999999999999991 n=0.5000000004054527 r=8.109071185732504e-10
+Seg 1 ALLVARS q_tot ic 2: qc a=0.5000000000000001 n=0.5000000000271204 r=5.424061199893474e-11
+Seg_idx = 1, ic = 0, wsncs->wsn_mixture_mass_rate = 52887.057329686315, C_f = 2.679e-15, Reynolds_number = 307.2088045310604, wsncs->wsn_mixture_viscosity = 0.8327592402686641, fanning_factor = 0.05208184063742326, length = 30.48, scaled_mass_rate = 52887.057329686315, wsncs->wsn_mixture_density = 664.034367716745, area = 7.296587699003967, diameter = 3.048,  pressure_drop = -1.1038947650407708e-10, component_rate = 0,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0.17151918169312097.
+Seg_idx = 1, ic = 1, wsncs->wsn_mixture_mass_rate = 52887.057329686315, C_f = 2.679e-15, Reynolds_number = 307.2088045310604, wsncs->wsn_mixture_viscosity = 0.8327592402686641, fanning_factor = 0.05208184063742326, length = 30.48, scaled_mass_rate = 52887.057329686315, wsncs->wsn_mixture_density = 664.034367716745, area = 7.296587699003967, diameter = 3.048,  pressure_drop = -1.1038947650407708e-10, component_rate = 26443.528664843212,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0.17151918169312097.
+Seg_idx = 1, ic = 2, wsncs->wsn_mixture_mass_rate = 52887.057329686315, C_f = 2.679e-15, Reynolds_number = 307.2088045310604, wsncs->wsn_mixture_viscosity = 0.8327592402686641, fanning_factor = 0.05208184063742326, length = 30.48, scaled_mass_rate = 52887.057329686315, wsncs->wsn_mixture_density = 664.034367716745, area = 7.296587699003967, diameter = 3.048,  pressure_drop = -1.1038947650407708e-10, component_rate = 26443.528664843103,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0.17151918169312097.
+MERGEN_DF_PHASE_THRESHOLD: Well W1: Seg_idx = 1, water_abs_eps = 1e-05, oil_in_before = 4.3079505962103594e-08, water_in_before = 3.409926575376358e-08, oil_in_after = 7.717877171586716e-08, water_in_after = 0, action = FOLD_WATER_TO_OIL
+MERGEN_DF_NEWTON_ALPHAO_START: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, alpha_g0 = 0.004093032376030744, alpha_o0 = 0.9959069676239692, alpha_w0 = 0, beta_o0 = 1, beta_flow = 1, beta_input = 0.558178175220258, beta_seed = 1, seed_from_prev_df = 1, seed_generation = 33, seed_reset = 0, jsg_in = 0, jso_in = 7.717877171586716e-08, jsw_in = 0, flux_scale = 7.717877171586716e-08, Rg0 = 3.158952113753302e-10, Ro0 = -3.1589521137531565e-10, Rw0 = 0, norm0 = 0.004093032376030744, abs0 = 3.158952113753302e-10
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 1, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 0.004093032376030744, alpha_o = 0.9959069676239692, alpha_w = 0, beta_o = 1, F1 = 3.158952113753302e-10, F2 = 0, Rg = 3.158952113753302e-10, Ro = -3.1589521137531565e-10, Rw = 0, norm = 0.004093032376030744, trial_norm = 1.2e-12, abs_norm = 3.158952113753302e-10, trial_abs = 9.26145260590406e-20, detJ = 7.717877171586824e-08, J11 = 7.717877171586824e-08, J12 = 0, J21 = 0, J22 = 1, d_alpha_g = -0.004093032376030687, d_alpha_o = 0, step = 1, vg = 7.717877171586718e-08, vo = 7.717877171586718e-08, vw = 7.717877171586718e-08, C0 = 1, Vd = 0, C0_OW = 1, Vd_OW = 0
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 2, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, F1 = 9.26145260590406e-20, F2 = 0, Rg = 9.26145260590406e-20, Ro = -9.260452393653655e-20, Rw = 0, norm = 1.2e-12, abs_norm = 9.26145260590406e-20, detJ = 7.717877171586824e-08, step = 1, reason = CONVERGED
+MERGEN_DF_NEWTON_ALPHAO_FINAL: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, converged = 1, step_failed = 0, it = 2, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, Rg = 9.26145260590406e-20, Ro = -9.260452393653655e-20, Rw = 0, res_norm = 1.3096964644776774e-19, norm_initial = 0.004093032376030744, norm_best = 1.2e-12, abs_initial = 3.158952113753302e-10, abs_best = 9.26145260590406e-20, detJ_last = 7.717877171586824e-08, beta_flow = 1, beta_input = 0.558178175220258, beta_seed = 1, seed_reset = 0
+MERGEN_DF_SEED_ONLY: Well W1: Seg_idx = 1, seed_from_prev_df = 1, seed_generation = 33, seed_alpha_g = 0.004093032376030744, seed_alpha_o = 0.9959069676239692, seed_alpha_w = 0, flash_alpha_g = 0, flash_alpha_o = 0.5581781752202579, flash_alpha_w = 0.44182182477974197, j_input_source = FLASH_PHASE_S_CURRENT_JMIX
+MERGEN: Well W1: it = 2, Seg_idx = 1, error = 1.3096964644776774e-19, average_volumetric_mixture_velocity = 7.717877171586718e-08, element_status->avg_xi = 861.8407311104039, seg.wsn->pipe_props.area = 7.296587699003967, wsncs->wsn_mixture_molar_rate = 41.93324070137896, wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0, gas_liq_interfacial_tension = 0, gas_density = 264.5873398826916, liquid_density = 772.0122080824104, diametr_dimless = 0, bubble_rise_velocity = 0, ksi = 7.717877171586718e-08, Kut_number = 0, flooding_velocity = 0, K_g = 1.2750000000000001, element_status->phase_S[PHASE_GAS] = 0, seg.wsn->pipe_props.diameter = 3.048, phase_S_WAT = 0.44182182477974197, phase_S_OIL = 0.5581781752202579, phase_S_GAS = 0, jsg_in = 0, jso_in = 4.3079505962103594e-08, jsw_in = 3.409926575376358e-08, phase_inputs_from_lagged_map = 0, lagged_phase_input_regularized = 0, lagged_lambda = 0, lagged_det = 0, gas_root_sign_mismatch = 0, vg_floor = 0.16890049666783508, local_df_converged = 1, ow_stage_active = 1, wsncs->wsn_C_0_OW = 1, wsncs->wsn_drift_velocity_OW = 0, new_holdups.gas = 1e-12, new_holdups.liquid = 0.999999999999, new_holdups.oil = 0.999999999999, new_holdups.water = 0
+MERGEN: Well W1: Seg_idx = 1, local residuals: Rg = 9.26145260590406e-20, Ro = 3.4099265753670966e-08, Rw = -3.409926575376358e-08
+Seg 1 var 0: D_sigma_o_D_p ana=0, num=0, relerr=0
+Seg 1 var 0: D_sigma_w_D_p ana=-0.03024385133929161, num=-0.030243851341538175, relerr=2.24656404590462e-12
+Seg 1 var 0: alpha_l value=0.999999999999, avg(prev,next)=0.999999999999, absdiff=0
+Seg 1 var 0: D_gas_liq_interfacial_tension_partial_D_seg_vars[0] ana=0, num=0, relerr=0
+MERGEN_DF_BOUNDARY_JACOBIAN: Well W1: Seg_idx = 1, value_mode = GL_OIL_ONLY, jacobian_mode = BOUNDARY_OIL_ONLY_APPEAR_WATER, uses_2d_ift = 1, second_eq = RO, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, J11 = 9.26145260590406e-08, J12 = 0, J21 = -1.5435754343188866e-08, J22 = 7.717877171585173e-08, detJ = 7.147875364282496e-15, comp_cols_inactive = 0
+MERGEN_DF_SEED_STORE: Well W1: Seg_idx = 1, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, rho_avg = 772.0122080819029
+Seg 1 var 0: alpha_water = 0, alpha_oil = 0.999999999999, alpha_gas = 1e-12, alpha_liq = 0.999999999999, 
+water_velo = 7.717877171585173e-08, oil_velo = 7.717877171585173e-08, gas_velo = 9.26145260590406e-08, liquid_velo = 7.717877171585173e-08, beta_o = 1, 
+D_alpha_w_D_seg_vars[0] = 1.709242933613687e-20, D_alpha_w_D_seg_vars[1] = -6.287607849963849e-17, D_alpha_w_D_seg_vars[2] = 6.287607849963849e-17,D_alpha_w_D_seg_vars[3] = 4.0141865648182903e-19, D_alpha_w_D_seg_vars[4] = 5.978639971105207e-19, inner_error = 1.3096964644776774e-19, rho_avg = 772.0122080819029 
+Seg 1 smallJ: detJ=7.147875364282496e-15, J11=9.26145260590406e-08, J12=0, J21=-1.5435754343188866e-08, J22=7.717877171585173e-08, fallback=0, flow_dir=2, comp_cols_inactive=0, state_upwinded=0, jacobian_mode=BOUNDARY_OIL_ONLY_APPEAR_WATER
+Seg 1 var 0: alpha_g ana=1.358412547296724e-16, num=0, relerr=0.0001358412547296724, alpha_o ana=-1.3585834715900854e-16, num=0, relerr=0.00013585834715900856, beta_o ana=-1.7092429336146403e-20, num=0, relerr=1.7092429336146404e-08
+Seg 1 var 0: IFT defect ana: Rg=-1.4693679385278594e-39, Ro=0 ; num-h defect: Rg=-1.258087342605402e-23, Ro=1.258219259875582e-23
+Seg 1 var 0: sigma_gl ana=7.283498877834013e-22, num=0, relerr=7.283498877834013e-10
+Seg 1 var 0: rho_l ana=0.16014017632650246, num=0.16014017626275745, relerr=3.9805756889589695e-10
+Seg 1 var 0: rho_avg_DF ana=0.1601401763269583, num=0.16014017626275745, relerr=4.0090401148519044e-10
+Seg 1 var 0: Vc ana=0, num=0, relerr=0
+Seg 1 var 0: Dhat ana=0, num=0, relerr=0
+Seg 1 var 0: Ku ana=0, num=0, relerr=0
+Seg 1 var 0: Vsgf ana=0, num=0, relerr=0
+Seg 1 var 0: ksi ana=-1.6155871338926322e-27, num=-1.0484061194127073e-11, relerr=0.9999999999999999
+Seg 1 var 0: eta ana=0, num=0, relerr=0
+Seg 1 var 0: Kg ana=0, num=0, relerr=0
+Seg 1 var 0: C0 full ana=0, full num=0, mixed(num holdup)=-0, relerr(full)=0
+Seg 1 var 0: Vd full ana=0, full num=0, mixed(num holdup)=0, relerr(full)=0
+Seg 1 var 0: Vg full ana=-1.258087342605402e-11, full num=-1.2580873434275977e-11, mixed(num holdup)=-1.258087342605402e-11, relerr(full)=6.535283283363854e-10
+Seg 1 var 0: Vl full ana=-1.048406118837835e-11, full num=-1.0484061194127073e-11, mixed(num holdup)=-1.0484061188376254e-11, relerr(full)=5.483297540382264e-10
+Seg 1 var 0: sigma_ow ana=0, num=0, relerr=0
+Seg 1 var 0: Vc_ow ana=0, num=0, relerr=0
+Seg 1 var 0: C0_ow ana=-0, num=0, relerr=0
+Seg 1 var 0: Vd_ow ana=0, num=0, relerr=0
+Seg 1 var 0: Vo ana=-1.048406118837835e-11, num=-1.0484061194127073e-11, relerr=5.483297540382264e-10
+Seg 1 var 0: Vw ana=-1.048406118837835e-11, num=-1.0484061194127073e-11, relerr=5.483297540382264e-10
+Seg 1 var 0 ic 0: qc ana=8.111199054966405e-19, num=0, relerr=8.111199054966405e-07
+Seg 1 var 0 ic 1: qc ana=0.002689140931978826, num=0.002689140924161393, relerr=2.9070374258371675e-09
+Seg 1 var 0 ic 2: qc ana=3.998912692847001e-14, num=3.789060552648202e-14, relerr=0.002098521401987986
+Seg 1 ALLVARS checker seed: incoming_prev_df_state (not converged_final_state), flow_dir=2, comp_cols_inactive=0, state_upwinded=0
+Seg 1 ALLVARS p: alpha_g a=1.358412547296724e-16 n=0 r=0.0001358412547296724 | alpha_o a=-1.3585834715900854e-16 n=0 r=0.00013585834715900856 | beta_o a=-1.7092429336146403e-20 n=0 r=1.7092429336146404e-08 | rho_avg a=0.1601401763269583 n=0.16014017626275745 r=4.0090401148519044e-10
+Seg 1 ALLVARS p ic 0: qc a=8.111199054966405e-19 n=0 r=8.111199054966405e-07
+Seg 1 ALLVARS p ic 1: qc a=0.002689140931978826 n=0.002689140924161393 r=2.9070374258371675e-09
+Seg 1 ALLVARS p ic 2: qc a=3.998912692847001e-14 n=3.789060552648202e-14 r=0.002098521401987986
+Seg 1 ALLVARS N[0]: alpha_g a=5.817817522025801e-14 n=0 r=0.05817817522025801 | alpha_o a=-5.811529914175837e-14 n=0 r=0.05811529914175837 | beta_o a=6.287607849970113e-17 n=0 r=6.287607849970114e-05 | rho_avg a=-2.9533836474648725e-11 n=0 r=1
+Seg 1 ALLVARS N[0] ic 0: qc a=-2.983779417639695e-15 n=0 r=0.0029837794176396947
+Seg 1 ALLVARS N[0] ic 1: qc a=-2.185323193723409 n=-2.185323199199729 r=2.5059541966384824e-09
+Seg 1 ALLVARS N[0] ic 2: qc a=0 n=-8.987560238073152e-13 r=0.8987560238073152
+Seg 1 ALLVARS N[1]: alpha_g a=-5.817817522025801e-14 n=0 r=0.05817817522025801 | alpha_o a=5.811529914175837e-14 n=0 r=0.05811529914175837 | beta_o a=-6.287607849970113e-17 n=0 r=6.287607849970114e-05 | rho_avg a=2.9533836474648725e-11 n=0 r=1
+Seg 1 ALLVARS N[1] ic 0: qc a=2.983779417639695e-15 n=0 r=0.0029837794176396947
+Seg 1 ALLVARS N[1] ic 1: qc a=2.185323193723409 n=2.185323199199729 r=2.5059541966384824e-09
+Seg 1 ALLVARS N[1] ic 2: qc a=0 n=8.987560238073152e-13 r=0.8987560238073152
+Seg 1 ALLVARS N[2]: alpha_g a=-7.103709426648228e-13 n=0 r=0.7103709426648228 | alpha_o a=7.103705412461663e-13 n=0 r=0.7103705412461664 | beta_o a=-4.0141865648263185e-19 n=0 r=4.0141865648263185e-07 | rho_avg a=-902.2515175321419 n=-902.2515146136811 r=3.2346420772444964e-09
+Seg 1 ALLVARS N[2] ic 0: qc a=1.904929113977659e-17 n=0 r=1.904929113977659e-05
+Seg 1 ALLVARS N[2] ic 1: qc a=-54.77300416230422 n=-54.77300433060606 r=3.0727151139605247e-09
+Seg 1 ALLVARS N[2] ic 2: qc a=37.56259431388706 n=37.56259465050733 r=8.96158188198244e-09
+Seg 1 ALLVARS q_tot: alpha_g a=-2.3847429468219356e-14 n=0 r=0.023847429468219355 | alpha_o a=2.3846831604222245e-14 n=0 r=0.023846831604222248 | beta_o a=-5.978639971117164e-19 n=0 r=5.978639971117164e-07 | rho_avg a=1.2100900308880618e-11 n=0 r=1
+Seg 1 ALLVARS q_tot ic 0: qc a=2.837158950898038e-17 n=0 r=2.837158950898038e-05
+Seg 1 ALLVARS q_tot ic 1: qc a=0.895771318544834 n=0.8957713185697539 r=2.7819426062803577e-11
+Seg 1 ALLVARS q_tot ic 2: qc a=-6.274413462467065e-29 n=3.684031125479535e-13 r=0.36840311254795355
+Seg_idx = 1, ic = 0, wsncs->wsn_mixture_mass_rate = 37.562594313902515, C_f = 2.679e-15, Reynolds_number = 0.45255774037537344, wsncs->wsn_mixture_viscosity = 0.4014997672474162, fanning_factor = 35.35460466708363, length = 30.48, scaled_mass_rate = 37.562594313902515, wsncs->wsn_mixture_density = 590.0112647323174, area = 7.296587699003967, diameter = 3.048,  pressure_drop = -4.254317926131923e-14, component_rate = 0,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0.
+Seg_idx = 1, ic = 1, wsncs->wsn_mixture_mass_rate = 37.562594313902515, C_f = 2.679e-15, Reynolds_number = 0.45255774037537344, wsncs->wsn_mixture_viscosity = 0.4014997672474162, fanning_factor = 35.35460466708363, length = 30.48, scaled_mass_rate = 37.562594313902515, wsncs->wsn_mixture_density = 590.0112647323174, area = 7.296587699003967, diameter = 3.048,  pressure_drop = -4.254317926131923e-14, component_rate = 37.56259431388707,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0.
+Seg_idx = 1, ic = 2, wsncs->wsn_mixture_mass_rate = 37.562594313902515, C_f = 2.679e-15, Reynolds_number = 0.45255774037537344, wsncs->wsn_mixture_viscosity = 0.4014997672474162, fanning_factor = 35.35460466708363, length = 30.48, scaled_mass_rate = 37.562594313902515, wsncs->wsn_mixture_density = 590.0112647323174, area = 7.296587699003967, diameter = 3.048,  pressure_drop = -4.254317926131923e-14, component_rate = 1.5448336393491492e-11,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0.
+MERGEN_DF_NEWTON_ALPHAO_START: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, alpha_g0 = 1e-12, alpha_o0 = 0.999999999999, alpha_w0 = 0, beta_o0 = 1, beta_flow = 1, beta_input = 1, beta_seed = 1, seed_from_prev_df = 1, seed_generation = 34, seed_reset = 0, jsg_in = 0, jso_in = 73426.70716978094, jsw_in = 0, flux_scale = 73426.70716978094, Rg0 = 8.811221687257511e-08, Ro0 = -8.811184670776129e-08, Rw0 = 0, norm0 = 1.200002291657143e-12, abs0 = 8.811221687257511e-08
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 1, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, F1 = 8.811221687257511e-08, F2 = 0, Rg = 8.811221687257511e-08, Ro = -8.811184670776129e-08, Rw = 0, norm = 1.200002291657143e-12, abs_norm = 8.811221687257511e-08, detJ = 0, step = 0, reason = CONVERGED
+MERGEN_DF_NEWTON_ALPHAO_FINAL: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, converged = 1, step_failed = 0, it = 1, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, Rg = 8.811221687257511e-08, Ro = -8.811184670776129e-08, Rw = 0, res_norm = 8.811221688074646e-08, norm_initial = 1.200002291657143e-12, norm_best = 1.200002291657143e-12, abs_initial = 8.811221687257511e-08, abs_best = 8.811221687257511e-08, detJ_last = 0, beta_flow = 1, beta_input = 1, beta_seed = 1, seed_reset = 0
+MERGEN_DF_SEED_ONLY: Well W1: Seg_idx = 1, seed_from_prev_df = 1, seed_generation = 34, seed_alpha_g = 1e-12, seed_alpha_o = 0.999999999999, seed_alpha_w = 0, flash_alpha_g = 0, flash_alpha_o = 1, flash_alpha_w = 0, j_input_source = FLASH_PHASE_S_CURRENT_JMIX
+MERGEN: Well W1: it = 1, Seg_idx = 1, error = 8.811221688074646e-08, average_volumetric_mixture_velocity = -73426.70716978094, element_status->avg_xi = 727.4344696396581, seg.wsn->pipe_props.area = 7.296587699003967, wsncs->wsn_mixture_molar_rate = -33672974245625.33, wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.16826883797835507, gas_liq_interfacial_tension = 0.011741348630037783, gas_density = 55.30982331757634, liquid_density = 727.4344696396581, diametr_dimless = 2284.101426680795, bubble_rise_velocity = 0.10997963266562794, ksi = 5.753021630919961e-08, Kut_number = 3.2, flooding_velocity = 1.2763155065356384, K_g = 1.2750000000000001, element_status->phase_S[PHASE_GAS] = 0, seg.wsn->pipe_props.diameter = 3.048, phase_S_WAT = 0, phase_S_OIL = 1, phase_S_GAS = 0, jsg_in = -0, jso_in = -73426.70716978094, jsw_in = -0, phase_inputs_from_lagged_map = 0, lagged_phase_input_regularized = 0, lagged_lambda = 0, lagged_det = 0, gas_root_sign_mismatch = 0, vg_floor = -88112.21687257511, local_df_converged = 0, ow_stage_active = 1, wsncs->wsn_C_0_OW = 1, wsncs->wsn_drift_velocity_OW = -0, new_holdups.gas = 1e-12, new_holdups.liquid = 0.999999999999, new_holdups.oil = 0.999999999999, new_holdups.water = 0
+MERGEN: Well W1: Seg_idx = 1, local residuals: Rg = -8.811221687257511e-08, Ro = 8.811184670776129e-08, Rw = 0
+Seg 1 var 0: D_sigma_o_D_p ana=-0.08893090357338902, num=-0.08893090357631195, relerr=2.922925790294073e-12
+Seg 1 var 0: D_sigma_w_D_p ana=-0.06822606371147677, num=-0.06822606371414963, relerr=2.6728619317850644e-12
+Seg 1 var 0: alpha_l value=0.999999999999, avg(prev,next)=0.999999999999, absdiff=0
+Seg 1 var 0: D_gas_liq_interfacial_tension_partial_D_seg_vars[0] ana=-8.893090357338902e-05, num=-8.89309035769642e-05, relerr=3.575183768825263e-15
+MERGEN_DF_BOUNDARY_JACOBIAN: Well W1: Seg_idx = 1, value_mode = GL_OIL_ONLY, jacobian_mode = BOUNDARY_OIL_ONLY_APPEAR_WATER, uses_2d_ift = 1, second_eq = RO, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, J11 = 88112.21687257511, J12 = -1.4218998686641617e-13, J21 = -14685.50970280885, J22 = 73426.70716976626, detJ = 6469789946.381511, comp_cols_inactive = 0
+Seg 1 var 0: alpha_water = 0, alpha_oil = 0.999999999999, alpha_gas = 1e-12, alpha_liq = 0.999999999999, 
+water_velo = -73426.70716976626, oil_velo = -73426.70716976626, gas_velo = -88112.21687257511, liquid_velo = -73426.70716976626, beta_o = 1, 
+D_alpha_w_D_seg_vars[0] = -1.0543056332912251e-20, D_alpha_w_D_seg_vars[1] = 0.7558896017348036, D_alpha_w_D_seg_vars[2] = 0,D_alpha_w_D_seg_vars[3] = 1.6711551593579124e-16, D_alpha_w_D_seg_vars[4] = 1.1787804083391829e-30, inner_error = 8.811221688074646e-08, rho_avg = 727.4344696389861 
+Seg 1 smallJ: detJ=6469789946.381511, J11=88112.21687257511, J12=-1.4218998686641617e-13, J21=-14685.50970280885, J22=73426.70716976626, fallback=0, flow_dir=1, comp_cols_inactive=0, state_upwinded=0, jacobian_mode=BOUNDARY_OIL_ONLY_APPEAR_WATER
+Seg 1 var 0: alpha_g ana=1.937681326311052e-16, num=0, relerr=0.0001937681326311052, alpha_o ana=-1.9375758957477228e-16, num=0, relerr=0.00019375758957477227, beta_o ana=1.0543056332933337e-20, num=0, relerr=1.0543056332933338e-08
+Seg 1 var 0: IFT defect ana: Rg=-3.4146679450771676e-11, Ro=2.845396358325312e-11 ; num-h defect: Rg=-1.7073339725385838e-11, Ro=1.7072565583475807e-11
+Seg 1 var 0: sigma_gl ana=-8.893090357338902e-05, num=-8.89309035769642e-05, relerr=4.0201815398526367e-11
+Seg 1 var 0: rho_l ana=0.14095081805319282, num=0.1409508179790464, relerr=5.260445611962534e-10
+Seg 1 var 0: rho_avg_DF ana=0.14095081805365256, num=0.1409508179790464, relerr=5.293062900787381e-10
+Seg 1 var 0: Vc ana=-0.00024303972493801718, num=-0.00024303972494255088, relerr=1.8654151314304894e-11
+Seg 1 var 0: Dhat ana=7.647642427925512, num=7.6476424280826905, relerr=2.0552512996933825e-11
+Seg 1 var 0: Ku ana=0, num=0, relerr=0
+Seg 1 var 0: Vsgf ana=-0.011129970311914483, num=-0.011129970313161763, relerr=1.1206499405844408e-10
+Seg 1 var 0: ksi ana=5.016862045358463e-10, num=4.90538681968956e-10, relerr=0.02222010983380319
+Seg 1 var 0: eta ana=0, num=0, relerr=0
+Seg 1 var 0: Kg ana=0, num=0, relerr=0
+Seg 1 var 0: C0 full ana=-0, full num=0, mixed(num holdup)=-0, relerr(full)=0
+Seg 1 var 0: Vd full ana=0.0003718507791554166, full num=0.00037185077916834786, mixed(num holdup)=-0.0003718507791554058, relerr(full)=3.47754530463959e-11
+Seg 1 var 0: Vg full ana=17.07333972538584, full num=17.073339731723536, mixed(num holdup)=-17.07333972538584, relerr(full)=3.712042687217978e-10
+Seg 1 var 0: Vl full ana=14.227473228838903, full num=14.227473227947485, mixed(num holdup)=-14.227473228836057, relerr(full)=6.265473005904503e-11
+Seg 1 var 0: sigma_ow ana=-8.893090357338902e-05, num=-8.89309035769642e-05, relerr=4.0201815398526367e-11
+Seg 1 var 0: Vc_ow ana=-0.0001484931150778778, num=-0.00014849311507497687, relerr=1.953589256504874e-11
+Seg 1 var 0: C0_ow ana=0, num=0, relerr=0
+Seg 1 var 0: Vd_ow ana=-0, num=0, relerr=0
+Seg 1 var 0: Vo ana=14.227473228838903, num=14.227473227947485, relerr=6.265473005904503e-11
+Seg 1 var 0: Vw ana=14.227473228838903, num=14.227473227947485, relerr=6.265473005904503e-11
+Seg 1 var 0 ic 0: qc ana=4.6966655389034586e-07, num=0, relerr=1
+Seg 1 var 0 ic 1: qc ana=0.0078277587890625, num=1.953125, relerr=0.9959921875
+Seg 1 var 0 ic 2: qc ana=-0.04060068208091669, num=-0.04000535683190698, relerr=0.014662937135470608
+Seg 1 ALLVARS checker seed: incoming_prev_df_state (not converged_final_state), flow_dir=1, comp_cols_inactive=0, state_upwinded=0
+Seg 1 ALLVARS p: alpha_g a=1.937681326311052e-16 n=0 r=0.0001937681326311052 | alpha_o a=-1.9375758957477228e-16 n=0 r=0.00019375758957477227 | beta_o a=1.0543056332933337e-20 n=0 r=1.0543056332933338e-08 | rho_avg a=0.14095081805365256 n=0.1409508179790464 r=5.293062900787381e-10
+Seg 1 ALLVARS p ic 0: qc a=4.6966655389034586e-07 n=0 r=1
+Seg 1 ALLVARS p ic 1: qc a=0.0078277587890625 n=1.953125 r=0.9959921875
+Seg 1 ALLVARS p ic 2: qc a=-0.04060068208091669 n=-0.04000535683190698 r=0.014662937135470608
+Seg 1 ALLVARS N[0]: alpha_g a=2.4410871227774133e-13 n=0 r=0.24410871227774134 | alpha_o a=-0.7558896017350477 n=5.551115123125783e-13 r=1.0000000000007343 | beta_o a=-0.7558896017355595 n=5.551115123125783e-13 r=1.0000000000007343 | rho_avg a=177.5743180955502 n=-5.684341886080801e-10 r=1.000000000003201
+Seg 1 ALLVARS N[0] ic 0: qc a=-33672974245625.33 n=821930219.4809914 r=1.000024409195739
+Seg 1 ALLVARS N[0] ic 1: qc a=33672974245625.332 n=8219301947539.0625 r=0.7559080499517538
+Seg 1 ALLVARS N[0] ic 2: qc a=0 n=0.7499933327559383 r=1
+Seg 1 ALLVARS N[1]: alpha_g a=-0 n=0 r=0 | alpha_o a=-0 n=0 r=0 | beta_o a=-0 n=0 r=0 | rho_avg a=0 n=0 r=0
+Seg 1 ALLVARS N[1] ic 0: qc a=0 n=0 r=0
+Seg 1 ALLVARS N[1] ic 1: qc a=0 n=0 r=0
+Seg 1 ALLVARS N[1] ic 2: qc a=0 n=0 r=0
+Seg 1 ALLVARS N[2]: alpha_g a=-1.154882553527781e-12 n=0 r=1 | alpha_o a=1.1547154380118452e-12 n=0 r=1 | beta_o a=-1.6711551593592352e-16 n=0 r=0.00016711551593592353 | rho_avg a=-840.987758794147 n=-840.9877562252177 r=3.054657172918082e-09
+Seg 1 ALLVARS N[2] ic 0: qc a=-0.007444574513573692 n=0 r=1
+Seg 1 ALLVARS N[2] ic 1: qc a=33672974245538.227 n=33672974582382.812 r=1.0003410453489665e-08
+Seg 1 ALLVARS N[2] ic 2: qc a=-33672974245584.926 n=-33672974582307.06 r=9.999773913333615e-09
+Seg 1 ALLVARS q_tot: alpha_g a=2.969734966073801e-26 n=0 r=2.969734966073801e-14 | alpha_o a=-2.9698528441146347e-26 n=0 r=2.969852844114635e-14 | beta_o a=-1.1787804083415404e-30 n=0 r=1.1787804083415405e-18 | rho_avg a=-1.996004371719034e-23 n=0 r=1.9960043717190342e-11
+Seg 1 ALLVARS q_tot ic 0: qc a=-5.251169250133292e-17 n=0 r=5.251169250133292e-05
+Seg 1 ALLVARS q_tot ic 1: qc a=1 n=1.0000000001299165 r=1.299165219679181e-10
+Seg 1 ALLVARS q_tot ic 2: qc a=0 n=9.124091688511993e-14 r=0.09124091688511993
+Seg_idx = 1, ic = 0, wsncs->wsn_mixture_mass_rate = -33672974245588, C_f = 2.679e-15, Reynolds_number = 148993452136.31046, wsncs->wsn_mixture_viscosity = 1.0932462863979282, fanning_factor = 0.0029949520967459424, length = 30.48, scaled_mass_rate = -33672974245588, wsncs->wsn_mixture_density = 727.4344696389861, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 2349048.916486774, component_rate = 0,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.16826883797835507.
+Seg_idx = 1, ic = 1, wsncs->wsn_mixture_mass_rate = -33672974245588, C_f = 2.679e-15, Reynolds_number = 148993452136.31046, wsncs->wsn_mixture_viscosity = 1.0932462863979282, fanning_factor = 0.0029949520967459424, length = 30.48, scaled_mass_rate = -33672974245588, wsncs->wsn_mixture_density = 727.4344696389861, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 2349048.916486774, component_rate = -33672974245584.926,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.16826883797835507.
+Seg_idx = 1, ic = 2, wsncs->wsn_mixture_mass_rate = -33672974245588, C_f = 2.679e-15, Reynolds_number = 148993452136.31046, wsncs->wsn_mixture_viscosity = 1.0932462863979282, fanning_factor = 0.0029949520967459424, length = 30.48, scaled_mass_rate = -33672974245588, wsncs->wsn_mixture_density = 727.4344696389861, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 2349048.916486774, component_rate = -3.07235891161271,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.16826883797835507.
+MERGEN_DF_PHASE_THRESHOLD: Well W1: Seg_idx = 1, water_abs_eps = 1e-05, oil_in_before = 0.23516221328801346, water_in_before = 7.55542282539873e-11, oil_in_after = 0.23516221336356768, water_in_after = 0, action = FOLD_WATER_TO_OIL
+MERGEN_DF_NEWTON_ALPHAO_START: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, alpha_g0 = 1e-12, alpha_o0 = 0.999999999999, alpha_w0 = 0, beta_o0 = 1, beta_flow = 1, beta_input = 0.9999999996787144, beta_seed = 1, seed_from_prev_df = 1, seed_generation = 34, seed_reset = 0, jsg_in = 5.470296259562472e-19, jso_in = 0.23516221336356768, jsw_in = 0, flux_scale = 0.23516221336356768, Rg0 = 4.913587826729997e-13, Ro0 = -4.91329199547863e-13, Rw0 = 0, norm0 = 2.0894461556769946e-12, abs0 = 4.913587826729997e-13
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 1, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, F1 = 4.913587826729997e-13, F2 = 0, Rg = 4.913587826729997e-13, Ro = -4.91329199547863e-13, Rw = 0, norm = 2.0894461556769946e-12, abs_norm = 4.913587826729997e-13, detJ = 0, step = 0, reason = CONVERGED
+MERGEN_DF_NEWTON_ALPHAO_FINAL: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, converged = 1, step_failed = 0, it = 1, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, Rg = 4.913587826729997e-13, Ro = -4.91329199547863e-13, Rw = 0, res_norm = 6.948653363337648e-13, norm_initial = 2.0894461556769946e-12, norm_best = 2.0894461556769946e-12, abs_initial = 4.913587826729997e-13, abs_best = 4.913587826729997e-13, detJ_last = 0, beta_flow = 1, beta_input = 0.9999999996787144, beta_seed = 1, seed_reset = 0
+MERGEN_DF_SEED_ONLY: Well W1: Seg_idx = 1, seed_from_prev_df = 1, seed_generation = 34, seed_alpha_g = 1e-12, seed_alpha_o = 0.999999999999, seed_alpha_w = 0, flash_alpha_g = 2.326179950987803e-18, flash_alpha_o = 0.9999999996787143, flash_alpha_w = 3.212855805927385e-10, j_input_source = FLASH_PHASE_S_CURRENT_JMIX
+MERGEN: Well W1: it = 1, Seg_idx = 1, error = 6.948653363337648e-13, average_volumetric_mixture_velocity = -0.2351622133635677, element_status->avg_xi = 717.2339903752447, seg.wsn->pipe_props.area = 7.296587699003967, wsncs->wsn_mixture_molar_rate = -106331502.6640625, wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.20916467366634442, gas_liq_interfacial_tension = 0.025542215147856557, gas_density = 0.130583367052176, liquid_density = 717.2339902974877, diametr_dimless = 1599.5988377215328, bubble_rise_velocity = 0.13670893703682863, ksi = 1e-12, Kut_number = 3.2, flooding_velocity = 32.42152098900593, K_g = 1.2750000000000001, element_status->phase_S[PHASE_GAS] = 2.326179950987803e-18, seg.wsn->pipe_props.diameter = 3.048, phase_S_WAT = 3.212855805927385e-10, phase_S_OIL = 0.9999999996787143, phase_S_GAS = 2.326179950987803e-18, jsg_in = -5.470296259562472e-19, jso_in = -0.23516221328801346, jsw_in = -7.55542282539873e-11, phase_inputs_from_lagged_map = 0, lagged_phase_input_regularized = 0, lagged_lambda = 0, lagged_det = 0, gas_root_sign_mismatch = 0, vg_floor = -0.4913593297232226, local_df_converged = 1, ow_stage_active = 1, wsncs->wsn_C_0_OW = 1, wsncs->wsn_drift_velocity_OW = -0, new_holdups.gas = 1e-12, new_holdups.liquid = 0.999999999999, new_holdups.oil = 0.999999999999, new_holdups.water = 0
+MERGEN: Well W1: Seg_idx = 1, local residuals: Rg = -4.913587826729997e-13, Ro = -7.506290033987284e-11, Rw = 7.55542282539873e-11
+Seg 1 var 0: D_sigma_o_D_p ana=-11.688068346454866, num=-11.704750765147764, relerr=0.016682418692898437
+Seg 1 var 0: D_sigma_w_D_p ana=-12.297185888799705, num=-12.318529539022904, relerr=0.021343650223199617
+Seg 1 var 0: alpha_l value=0.999999999999, avg(prev,next)=0.999999999999, absdiff=0
+Seg 1 var 0: D_gas_liq_interfacial_tension_partial_D_seg_vars[0] ana=-0.011688068346454866, num=-0.0117047507651475, relerr=1.6682418692634884e-05
+MERGEN_DF_BOUNDARY_JACOBIAN: Well W1: Seg_idx = 1, value_mode = GL_OIL_ONLY, jacobian_mode = BOUNDARY_OIL_ONLY_APPEAR_WATER, uses_2d_ift = 1, second_eq = RO, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, J11 = 0.49135932970255813, J12 = -6.41080158093063e-14, J21 = -0.25619711633924663, J22 = 0.23516221336337562, detJ = 0.11554914752958179, comp_cols_inactive = 0
+MERGEN_DF_SEED_STORE: Well W1: Seg_idx = 1, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, rho_avg = 717.2339902967706
+Seg 1 var 0: alpha_water = 0, alpha_oil = 0.999999999999, alpha_gas = 1e-12, alpha_liq = 0.999999999999, 
+water_velo = -0.2351622133633115, oil_velo = -0.2351622133633115, gas_velo = -0.49135932970262564, liquid_velo = -0.2351622133633115, beta_o = 1, 
+D_alpha_w_D_seg_vars[0] = -1.196336312645583e-20, D_alpha_w_D_seg_vars[1] = 4.239440601502366e-17, D_alpha_w_D_seg_vars[2] = -8.207264883399802e-22,D_alpha_w_D_seg_vars[3] = 2.5644144499059956e-16, D_alpha_w_D_seg_vars[4] = -1.3326103253633422e-24, inner_error = 6.948653363337648e-13, rho_avg = 717.2339902967706 
+Seg 1 smallJ: detJ=0.11554914752958179, J11=0.49135932970255813, J12=-6.41080158093063e-14, J21=-0.25619711633924663, J22=0.23516221336337562, fallback=0, flow_dir=1, comp_cols_inactive=0, state_upwinded=0, jacobian_mode=BOUNDARY_OIL_ONLY_APPEAR_WATER
+Seg 1 var 0: alpha_g ana=4.8949047386174484e-14, num=0, relerr=0.048949047386174484, alpha_o ana=-4.894903542281136e-14, num=0, relerr=0.04894903542281136, beta_o ana=1.1963363126479757e-20, num=0, relerr=1.1963363126479756e-08
+Seg 1 var 0: IFT defect ana: Rg=-4.810314222650551e-14, Ro=2.3021927024054918e-14 ; num-h defect: Rg=-2.405157111325259e-14, Ro=2.405156829992164e-14
+Seg 1 var 0: sigma_gl ana=-0.011688068346454866, num=-0.0117047507651475, relerr=0.0014252690234386768
+Seg 1 var 0: rho_l ana=0.14343583190554915, num=0.1434358318874729, relerr=1.2602334067258168e-10
+Seg 1 var 0: rho_avg_DF ana=0.14343583187112394, num=0.1434358318874729, relerr=1.1398093319127323e-10
+Seg 1 var 0: Vc ana=-0.01568534025962516, num=-0.015707515039556363, relerr=0.0014117306190928247
+Seg 1 var 0: Dhat ana=365.23234569818953, num=365.7478314925129, relerr=0.0014094021889885246
+Seg 1 var 0: Ku ana=0, num=0, relerr=0
+Seg 1 var 0: Vsgf ana=-105.48331772138894, num=-105.49145755669187, relerr=7.716108480682202e-05
+Seg 1 var 0: ksi ana=4.8949047386174484e-14, num=0, relerr=0.048949047386174484
+Seg 1 var 0: eta ana=0, num=0, relerr=0
+Seg 1 var 0: Kg ana=0, num=0, relerr=0
+Seg 1 var 0: C0 full ana=-0, full num=0, mixed(num holdup)=-0, relerr(full)=0
+Seg 1 var 0: Vd full ana=0.023998570597236906, full num=0.02403249801052887, mixed(num holdup)=-0.02399857059723674, relerr(full)=0.0014117306189768036
+Seg 1 var 0: Vg full ana=0.024055005213813048, full num=0.024088932627092108, mixed(num holdup)=-0.02405500521381288, relerr(full)=0.0014084232707306712
+Seg 1 var 0: Vl full ana=4.7028847135316916e-05, full num=4.7028847122154716e-05, mixed(num holdup)=-4.702884712277631e-05, relerr(full)=2.79875047406011e-10
+Seg 1 var 0: sigma_ow ana=-0.011688068346454866, num=-0.0117047507651475, relerr=0.0014252690234386768
+Seg 1 var 0: Vc_ow ana=-0.01031880595771174, num=-0.010333420602880172, relerr=0.0014143085557127824
+Seg 1 var 0: C0_ow ana=0, num=0, relerr=0
+Seg 1 var 0: Vd_ow ana=-0, num=0, relerr=0
+Seg 1 var 0: Vo ana=4.7028847135316916e-05, num=4.7028847122154716e-05, relerr=2.79875047406011e-10
+Seg 1 var 0: Vw ana=4.7028847135316916e-05, num=4.7028847122154716e-05, relerr=2.79875047406011e-10
+Seg 1 var 0 ic 0: qc ana=1.7013255880318592e-12, num=0, relerr=1
+Seg 1 var 0 ic 1: qc ana=-5.23683411302045e-06, num=-7.450580596923828e-06, relerr=0.2971240234375
+Seg 1 var 0 ic 2: qc ana=-2.539511595530969e-07, num=-2.519584541005315e-07, relerr=0.007846805882170899
+Seg 1 ALLVARS checker seed: incoming_prev_df_state (not converged_final_state), flow_dir=1, comp_cols_inactive=0, state_upwinded=0
+Seg 1 ALLVARS p: alpha_g a=4.8949047386174484e-14 n=0 r=0.048949047386174484 | alpha_o a=-4.894903542281136e-14 n=0 r=0.04894903542281136 | beta_o a=1.1963363126479757e-20 n=0 r=1.1963363126479756e-08 | rho_avg a=0.14343583187112394 n=0.1434358318874729 r=1.1398093319127323e-10
+Seg 1 ALLVARS p ic 0: qc a=1.7013255880318592e-12 n=0 r=1
+Seg 1 ALLVARS p ic 1: qc a=-5.23683411302045e-06 n=-7.450580596923828e-06 r=0.2971240234375
+Seg 1 ALLVARS p ic 2: qc a=-2.539511595530969e-07 n=-2.519584541005315e-07 r=0.007846805882170899
+Seg 1 ALLVARS N[0]: alpha_g a=1.4489795018776315e-13 n=0 r=0.14489795018776316 | alpha_o a=-1.4494034459377818e-13 n=-3.2123753657131715e-06 r=0.9999999548806325 | beta_o a=-4.2394406015057956e-17 n=-3.2123753657131715e-06 r=0.9999999999868028 | rho_avg a=-1.0389655349462074e-10 n=0.0007774553978379117 r=1.000000133636674
+Seg 1 ALLVARS N[0] ic 0: qc a=-6.02896417841487e-09 n=2225.7394548159937 r=1.0000000000027087
+Seg 1 ALLVARS N[0] ic 1: qc a=26827277.285989348 n=26825613.37210238 r=6.20232112722461e-05
+Seg 1 ALLVARS N[0] ic 2: qc a=83.58553107738335 n=83.5803468407903 r=6.202313398299763e-05
+Seg 1 ALLVARS N[1]: alpha_g a=1.350818838251438e-18 n=0 r=1.3508188382514381e-06 | alpha_o a=-1.349998111763098e-18 n=0 r=1.3499981117630981e-06 | beta_o a=8.207264883406587e-22 n=0 r=8.207264883406587e-10 | rho_avg a=0.002596372986954497 n=0.002596372610241815 r=1.45091896955832e-07
+Seg 1 ALLVARS N[1] ic 0: qc a=1.167165922014442e-13 n=0 r=0.11671659220144419
+Seg 1 ALLVARS N[1] ic 1: qc a=-331.30669933484995 n=-331.30690455436707 r=6.194242084667694e-07
+Seg 1 ALLVARS N[1] ic 2: qc a=331.29517156248477 n=331.2952245005363 r=1.5979116991565247e-07
+Seg 1 ALLVARS N[2]: alpha_g a=-2.0720527603763202e-13 n=0 r=0.20720527603763203 | alpha_o a=2.0694883459264142e-13 n=0 r=0.20694883459264143 | beta_o a=-2.5644144499086e-16 n=0 r=0.00025644144499085996 | rho_avg a=-833.3214751353357 n=-833.3214725200833 r=3.138347621811469e-09
+Seg 1 ALLVARS N[2] ic 0: qc a=-3.6468874812431056e-08 n=0 r=1
+Seg 1 ALLVARS N[2] ic 1: qc a=106331171.43073793 n=106331172.49406874 r=1.0000179526861482e-08
+Seg 1 ALLVARS N[2] ic 2: qc a=-106331171.4028315 n=-106331172.46611291 r=9.999714968175176e-09
+Seg 1 ALLVARS q_tot: alpha_g a=5.401156799586893e-21 n=0 r=5.401156799586893e-09 | alpha_o a=-5.3998241892615294e-21 n=0 r=5.3998241892615295e-09 | beta_o a=1.3326103253645028e-24 n=0 r=1.3326103253645028e-12 | rho_avg a=-3.8735104590693215e-18 n=0 r=3.873510459069321e-06
+Seg 1 ALLVARS q_tot ic 0: qc a=1.8951226519258714e-16 n=0 r=0.00018951226519258713
+Seg 1 ALLVARS q_tot ic 1: qc a=0.9999968842093753 n=0.9999968841978847 r=1.1490622062637941e-11
+Seg 1 ALLVARS q_tot ic 2: qc a=3.11568221222442e-06 n=3.115682212354576e-06 r=4.177445606998601e-11
+Seg_idx = 1, ic = 0, wsncs->wsn_mixture_mass_rate = -106331502.65231274, C_f = 2.679e-15, Reynolds_number = 515869.6354040354, wsncs->wsn_mixture_viscosity = 0.9970701186322618, fanning_factor = 0.003550096690525767, length = 30.48, scaled_mass_rate = -106331502.65231274, wsncs->wsn_mixture_density = 717.2339902967706, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 2.816023803184556e-05, component_rate = 0,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.20916467366634442.
+Seg_idx = 1, ic = 1, wsncs->wsn_mixture_mass_rate = -106331502.65231274, C_f = 2.679e-15, Reynolds_number = 515869.6354040354, wsncs->wsn_mixture_viscosity = 0.9970701186322618, fanning_factor = 0.003550096690525767, length = 30.48, scaled_mass_rate = -106331502.65231274, wsncs->wsn_mixture_density = 717.2339902967706, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 2.816023803184556e-05, component_rate = -106331171.35714126,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.20916467366634442.
+Seg_idx = 1, ic = 2, wsncs->wsn_mixture_mass_rate = -106331502.65231274, C_f = 2.679e-15, Reynolds_number = 515869.6354040354, wsncs->wsn_mixture_viscosity = 0.9970701186322618, fanning_factor = 0.003550096690525767, length = 30.48, scaled_mass_rate = -106331502.65231274, wsncs->wsn_mixture_density = 717.2339902967706, area = 7.296587699003967, diameter = 3.048,  pressure_drop = 2.816023803184556e-05, component_rate = -331.29517148927107,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = -0.20916467366634442.
+MERGEN_DF_NEWTON_ALPHAO_START: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, alpha_g0 = 1e-12, alpha_o0 = 0.999999999999, alpha_w0 = 0, beta_o0 = 1, beta_flow = 1, beta_input = 1, beta_seed = 1, seed_from_prev_df = 1, seed_generation = 35, seed_reset = 0, jsg_in = 1.7186793097272947e-17, jso_in = 12.065885276340177, jsw_in = 0, flux_scale = 12.065885276340177, Rg0 = 1.4647351921861264e-11, Ro0 = -1.4647838497694465e-11, Rw0 = 0, norm0 = 1.2139475543152269e-12, abs0 = 1.4647351921861264e-11
+MERGEN_DF_NEWTON_ALPHAO: Well W1: Seg_idx = 1, it_loc = 1, mode = GL_OIL_ONLY, accepted = 1, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, F1 = 1.4647351921861264e-11, F2 = 0, Rg = 1.4647351921861264e-11, Ro = -1.4647838497694465e-11, Rw = 0, norm = 1.2139475543152269e-12, abs_norm = 1.4647351921861264e-11, detJ = 0, step = 0, reason = CONVERGED
+MERGEN_DF_NEWTON_ALPHAO_FINAL: Well W1: Seg_idx = 1, mode = GL_OIL_ONLY, dim = 1, eq2 = ALPHA_W=0, converged = 1, step_failed = 0, it = 1, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, Rg = 1.4647351921861264e-11, Ro = -1.4647838497694465e-11, Rw = 0, res_norm = 1.469757411608468e-11, norm_initial = 1.2139475543152269e-12, norm_best = 1.2139475543152269e-12, abs_initial = 1.4647351921861264e-11, abs_best = 1.4647351921861264e-11, detJ_last = 0, beta_flow = 1, beta_input = 1, beta_seed = 1, seed_reset = 0
+MERGEN_DF_SEED_ONLY: Well W1: Seg_idx = 1, seed_from_prev_df = 1, seed_generation = 35, seed_alpha_g = 1e-12, seed_alpha_o = 0.999999999999, seed_alpha_w = 0, flash_alpha_g = 1.424412109319014e-18, flash_alpha_o = 1, flash_alpha_w = 0, j_input_source = FLASH_PHASE_S_CURRENT_JMIX
+MERGEN: Well W1: it = 1, Seg_idx = 1, error = 1.469757411608468e-11, average_volumetric_mixture_velocity = 12.065885276340177, element_status->avg_xi = 726.8878190459619, seg.wsn->pipe_props.area = 7.296587699003967, wsncs->wsn_mixture_molar_rate = 5529172406.754588, wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0.1683067770461504, gas_liq_interfacial_tension = 0.011743524184193978, gas_density = 55.2919444593816, liquid_density = 726.8878190459619, diametr_dimless = 2282.9912815460293, bubble_rise_velocity = 0.11000442944196476, ksi = 9.453579407602658e-12, Kut_number = 3.2, flooding_velocity = 1.2763298171099804, K_g = 1.2750000000000001, element_status->phase_S[PHASE_GAS] = 1.424412109319014e-18, seg.wsn->pipe_props.diameter = 3.048, phase_S_WAT = 0, phase_S_OIL = 1, phase_S_GAS = 1.424412109319014e-18, jsg_in = 1.7186793097272947e-17, jso_in = 12.065885276340177, jsw_in = 0, phase_inputs_from_lagged_map = 0, lagged_phase_input_regularized = 0, lagged_lambda = 0, lagged_det = 0, gas_root_sign_mismatch = 0, vg_floor = 14.647369108654363, local_df_converged = 1, ow_stage_active = 1, wsncs->wsn_C_0_OW = 1, wsncs->wsn_drift_velocity_OW = 0, new_holdups.gas = 1e-12, new_holdups.liquid = 0.999999999999, new_holdups.oil = 0.999999999999, new_holdups.water = 0
+MERGEN: Well W1: Seg_idx = 1, local residuals: Rg = 1.4647351921861264e-11, Ro = -1.4647838497694465e-11, Rw = 0
+Seg 1 var 0: D_sigma_o_D_p ana=-0.08894772425354994, num=-0.08894772425538378, relerr=1.833838636500218e-12
+Seg 1 var 0: D_sigma_w_D_p ana=-0.06823811331918789, num=-0.06823811332168361, relerr=2.4957258482061206e-12
+Seg 1 var 0: alpha_l value=0.999999999999, avg(prev,next)=0.999999999999, absdiff=0
+Seg 1 var 0: D_gas_liq_interfacial_tension_partial_D_seg_vars[0] ana=-8.894772425354994e-05, num=-8.894772425462744e-05, relerr=1.0774936715432504e-15
+MERGEN_DF_BOUNDARY_JACOBIAN: Well W1: Seg_idx = 1, value_mode = GL_OIL_ONLY, jacobian_mode = BOUNDARY_OIL_ONLY_APPEAR_WATER, uses_2d_ift = 1, second_eq = RO, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, beta_o = 1, J11 = 14.647369108654166, J12 = -1.4215373293006621e-13, J21 = -2.581483832316569, J22 = 12.065885276337736, detJ = 176.73347526519413, comp_cols_inactive = 0
+MERGEN_DF_SEED_STORE: Well W1: Seg_idx = 1, alpha_g = 1e-12, alpha_o = 0.999999999999, alpha_w = 0, rho_avg = 726.8878190452903
+Seg 1 var 0: alpha_water = 0, alpha_oil = 0.999999999999, alpha_gas = 1e-12, alpha_liq = 0.999999999999, 
+water_velo = 12.065885276337594, oil_velo = 12.065885276337594, gas_velo = 14.647369108654363, liquid_velo = 12.065885276337594, beta_o = 1, 
+D_alpha_w_D_seg_vars[0] = 3.367461536796552e-20, D_alpha_w_D_seg_vars[1] = 0.7548353385309762, D_alpha_w_D_seg_vars[2] = 2.2501693738806617e-19,D_alpha_w_D_seg_vars[3] = 2.480062043852949e-16, D_alpha_w_D_seg_vars[4] = -1.5725706137207217e-26, inner_error = 1.469757411608468e-11, rho_avg = 726.8878190452903 
+Seg 1 smallJ: detJ=176.73347526519413, J11=14.647369108654166, J12=-1.4215373293006621e-13, J21=-2.581483832316569, J22=12.065885276337736, fallback=0, flow_dir=2, comp_cols_inactive=0, state_upwinded=0, jacobian_mode=BOUNDARY_OIL_ONLY_APPEAR_WATER
+Seg 1 var 0: alpha_g ana=2.169404669447626e-16, num=0, relerr=0.0002169404669447626, alpha_o ana=-2.1697414156013055e-16, num=0, relerr=0.00021697414156013055, beta_o ana=-3.3674615368008216e-20, num=0, relerr=3.3674615368008216e-08
+Seg 1 var 0: IFT defect ana: Rg=-7.888609052210118e-31, Ro=0 ; num-h defect: Rg=-3.177607093943757e-15, Ro=3.1780134079895106e-15
+Seg 1 var 0: sigma_gl ana=-8.894772425354994e-05, num=-8.894772425462744e-05, relerr=1.2113785715964449e-11
+Seg 1 var 0: rho_l ana=0.14086180016819969, num=0.14086180016192884, relerr=4.451771130943088e-11
+Seg 1 var 0: rho_avg_DF ana=0.14086180016864405, num=0.14086180016192884, relerr=4.767234063444609e-11
+Seg 1 var 0: Vc ana=-0.0002431192547191659, num=-0.00024311925472114693, relerr=8.148376017289956e-12
+Seg 1 var 0: Dhat ana=7.643018568799183, num=7.643018568614934, relerr=2.410684453983475e-11
+Seg 1 var 0: Ku ana=0, num=0, relerr=0
+Seg 1 var 0: Vsgf ana=-0.011133094142153658, num=-0.011133094143356281, relerr=1.0802235704534407e-10
+Seg 1 var 0: ksi ana=8.268000065999666e-14, num=8.062913673074115e-14, relerr=0.0020508639292555067
+Seg 1 var 0: eta ana=0, num=0, relerr=0
+Seg 1 var 0: Kg ana=0, num=0, relerr=0
+Seg 1 var 0: C0 full ana=0, full num=0, mixed(num holdup)=-0, relerr(full)=0
+Seg 1 var 0: Vd full ana=-0.00037197245972057566, full num=-0.0003719724597228691, mixed(num holdup)=-0.0003719724597205636, relerr(full)=6.1655447749203006e-12
+Seg 1 var 0: Vg full ana=-0.0031778342878288008, full num=-0.003177834287271253, mixed(num holdup)=-0.0031778342878287886, relerr(full)=1.7544902626609976e-10
+Seg 1 var 0: Vl full ana=-0.0023382181900899073, full num=-0.0023382181897346754, mixed(num holdup)=-0.0023382181900893475, relerr(full)=1.5192418929360588e-10
+Seg 1 var 0: sigma_ow ana=-8.894772425354994e-05, num=-8.894772425462744e-05, relerr=1.2113785715964449e-11
+Seg 1 var 0: Vc_ow ana=-0.000148562163954142, num=-0.0001485621639527035, relerr=9.682763761057542e-12
+Seg 1 var 0: C0_ow ana=-0, num=0, relerr=0
+Seg 1 var 0: Vd_ow ana=0, num=0, relerr=0
+Seg 1 var 0: Vo ana=-0.0023382181900899073, num=-0.0023382181897346754, relerr=1.5192418929360588e-10
+Seg 1 var 0: Vw ana=-0.0023382181900899073, num=-0.0023382181897346754, relerr=1.5192418929360588e-10
+Seg 1 var 0 ic 0: qc ana=2.4650765356171154e-10, num=0, relerr=1
+Seg 1 var 0 ic 1: qc ana=-1.2998934835195541e-06, num=0.000476837158203125, relerr=1.00272607421875
+Seg 1 var 0 ic 2: qc ana=6.748423691010618e-06, num=6.752088665962219e-06, relerr=0.0005427912950961337
+Seg 1 ALLVARS checker seed: incoming_prev_df_state (not converged_final_state), flow_dir=2, comp_cols_inactive=0, state_upwinded=0
+Seg 1 ALLVARS p: alpha_g a=2.169404669447626e-16 n=0 r=0.0002169404669447626 | alpha_o a=-2.1697414156013055e-16 n=0 r=0.00021697414156013055 | beta_o a=-3.3674615368008216e-20 n=0 r=3.3674615368008216e-08 | rho_avg a=0.14086180016864405 n=0.14086180016192884 r=4.767234063444609e-11
+Seg 1 ALLVARS p ic 0: qc a=2.4650765356171154e-10 n=0 r=1
+Seg 1 ALLVARS p ic 1: qc a=-1.2998934835195541e-06 n=0.000476837158203125 r=1.00272607421875
+Seg 1 ALLVARS p ic 2: qc a=6.748423691010618e-06 n=6.752088665962219e-06 r=0.0005427912950961337
+Seg 1 ALLVARS N[0]: alpha_g a=2.343832371682755e-13 n=0 r=0.2343832371682755 | alpha_o a=-0.7548353385312105 n=5.551115123125783e-13 r=1.0000000000007354 | beta_o a=-0.754835338531731 n=5.551115123125783e-13 r=1.0000000000007354 | rho_avg a=177.7384741258985 n=0 r=1
+Seg 1 ALLVARS N[0] ic 0: qc a=5525606932.5068245 n=-135101.8452452263 r=1.0000244501367714
+Seg 1 ALLVARS N[0] ic 1: qc a=-5522043757.447019 n=-1351018411.808014 r=0.7553408717585708
+Seg 1 ALLVARS N[0] ic 2: qc a=-3563175.0598053434 n=-871763.3040249348 r=0.7553408717245121
+Seg 1 ALLVARS N[1]: alpha_g a=7.402541755330557e-16 n=0 r=0.0007402541755330557 | alpha_o a=-7.4047919247044375e-16 n=0 r=0.0007404791924704437 | beta_o a=-2.25016937388319e-19 n=0 r=2.2501693738831902e-07 | rho_avg a=0.5437486911546591 n=0.5437486970549799 r=1.0851190668534506e-08
+Seg 1 ALLVARS N[1] ic 0: qc a=1.64718725488225e-09 n=0 r=1
+Seg 1 ALLVARS N[1] ic 1: qc a=3563175.0597961694 n=3563175.0869750977 r=7.62772740396206e-09
+Seg 1 ALLVARS N[1] ic 2: qc a=-3563175.0598005764 n=-3563175.0921485946 r=9.078425085222208e-09
+Seg 1 ALLVARS N[2]: alpha_g a=-1.1478277812853675e-12 n=0 r=1 | alpha_o a=1.1475797750809822e-12 n=0 r=1 | beta_o a=-2.48006204385387e-16 n=0 r=0.000248006204385387 | rho_avg a=-842.6765497665381 n=-842.6765471978115 r=3.0482948490934588e-09
+Seg 1 ALLVARS N[2] ic 0: qc a=1.815475153724342e-06 n=0 r=1
+Seg 1 ALLVARS N[2] ic 1: qc a=-5522043757.432539 n=-5522043812.580109 r=9.986804076189506e-09
+Seg 1 ALLVARS N[2] ic 2: qc a=5522043757.440321 n=5522043812.589962 r=9.987179187395995e-09
+Seg 1 ALLVARS q_tot: alpha_g a=-1.7878050695326054e-22 n=0 r=1.7878050695326054e-10 | alpha_o a=1.7879623265939774e-22 n=0 r=1.7879623265939774e-10 | beta_o a=1.5725706137215158e-26 n=0 r=1.5725706137215157e-14 | rho_avg a=1.2006454804851294e-19 n=0 r=1.2006454804851295e-07
+Seg 1 ALLVARS q_tot ic 0: qc a=-1.1511659088381622e-16 n=0 r=0.00011511659088381623
+Seg 1 ALLVARS q_tot ic 1: qc a=0.9993551522749757 n=0.9993551522990753 r=2.4115161802183836e-11
+Seg 1 ALLVARS q_tot ic 2: qc a=0.0006448477250242669 n=0.0006448477250718184 r=7.374063539831759e-11
+Seg_idx = 1, ic = 0, wsncs->wsn_mixture_mass_rate = 5529172406.748387, C_f = 2.679e-15, Reynolds_number = 32007031.37982343, wsncs->wsn_mixture_viscosity = 0.8356385209985936, fanning_factor = 0.0030079804553501343, length = 30.48, scaled_mass_rate = 5529172406.748387, wsncs->wsn_mixture_density = 666.4346981587572, area = 7.296587699003967, diameter = 3.048,  pressure_drop = -0.06943377433373853, component_rate = 0,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0.1683067770461504.
+Seg_idx = 1, ic = 1, wsncs->wsn_mixture_mass_rate = 5529172406.748387, C_f = 2.679e-15, Reynolds_number = 32007031.37982343, wsncs->wsn_mixture_viscosity = 0.8356385209985936, fanning_factor = 0.0030079804553501343, length = 30.48, scaled_mass_rate = 5529172406.748387, wsncs->wsn_mixture_density = 666.4346981587572, area = 7.296587699003967, diameter = 3.048,  pressure_drop = -0.06943377433373853, component_rate = 5525606932.500118,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0.1683067770461504.
+Seg_idx = 1, ic = 2, wsncs->wsn_mixture_mass_rate = 5529172406.748387, C_f = 2.679e-15, Reynolds_number = 32007031.37982343, wsncs->wsn_mixture_viscosity = 0.8356385209985936, fanning_factor = 0.0030079804553501343, length = 30.48, scaled_mass_rate = 5529172406.748387, wsncs->wsn_mixture_density = 666.4346981587572, area = 7.296587699003967, diameter = 3.048,  pressure_drop = -0.06943377433373853, component_rate = 3565474.248268888,wsncs->wsn_C_0 = 1.2, wsncs->wsn_drift_velocity = 0.1683067770461504.
+>>>>>>>>>>>>>>> Well: W1 >>>>>>>>>>> Control: BHP: 68.9476 >>>>>>>>>>>
+-----------------------
+ITER: 0
+ RHS NORM: [PRES = 1.1509e+02; IDX:   1] [ZCSUM = 1.1102e-16; IDX:   1] [COMPS = 8.7675e+03; IDX:   0]
+ VAR NORM: [PRES = 1.1500e+02; IDX:   1] [RATE  = 5.3089e+04; IDX:   1] [ZC    = 7.2419e+02; IDX:   1]
+ SEG SWITCH NUM: 1 CONN SWITCH NUM: 0 LIN SOLV IT NUM: 1 LIN SOLV PREC: 1.5194335762704556e-31 PRES CHOPS: 0 RATE CHOPS: 0 ZC CHOPS: 3 REG NUM: 0 WEIGHT: 1.0000e+00 WSEGITER: 1.0000e+00 STEP CHOP WEIGHT 1.0000e+00
+-----------------------
+-----------------------
+ITER: 1
+ RHS NORM: [PRES = 4.8862e-02; IDX:   1] [ZCSUM = 1.0000e+00; IDX:   1] [COMPS = 2.2989e+06; IDX:   1]
+ VAR NORM: [PRES = 2.9518e+02; IDX:   1] [RATE  = 5.2845e+04; IDX:   1] [ZC    = 5.6360e+02; IDX:   1]
+ SEG SWITCH NUM: 0 CONN SWITCH NUM: 0 LIN SOLV IT NUM: 3 LIN SOLV PREC: 0.0004091580580953256 PRES CHOPS: 0 RATE CHOPS: 1 ZC CHOPS: 3 REG NUM: 0 WEIGHT: 1.0000e+00 WSEGITER: 1.0000e+00 STEP CHOP WEIGHT 1.0000e+00
+-----------------------
+-----------------------
+ITER: 2
+ RHS NORM: [PRES = 2.9481e+02; IDX:   1] [ZCSUM = 1.0000e+00; IDX:   1] [COMPS = 1.6892e+07; IDX:   1]
+ VAR NORM: [PRES = 2.9491e+02; IDX:   1] [RATE  = 3.3673e+13; IDX:   1] [ZC    = 1.8567e+00; IDX:   1]
+ SEG SWITCH NUM: 1 CONN SWITCH NUM: 1 LIN SOLV IT NUM: 1 LIN SOLV PREC: 2.934579672313227e-33 PRES CHOPS: 0 RATE CHOPS: 1 ZC CHOPS: 2 REG NUM: 1 WEIGHT: 1.0000e+00 WSEGITER: 1.0000e+00 STEP CHOP WEIGHT 1.0000e+00
+-----------------------
+-----------------------
+ITER: 3
+ RHS NORM: [PRES = 2.3490e+06; IDX:   1] [ZCSUM = 0.0000e+00; IDX:   0] [COMPS = 3.3673e+13; IDX:  -1]
+ VAR NORM: [PRES = 5.1496e+03; IDX:   1] [RATE  = 3.3673e+13; IDX:   1] [ZC    = 3.1161e-06; IDX:   1]
+ SEG SWITCH NUM: 0 CONN SWITCH NUM: 1 LIN SOLV IT NUM: 1 LIN SOLV PREC: 2.7010214773647488e-14 PRES CHOPS: 1 RATE CHOPS: 0 ZC CHOPS: 0 REG NUM: 1 WEIGHT: 1.0000e+00 WSEGITER: 1.0000e+00 STEP CHOP WEIGHT 1.0000e+00
+-----------------------
+-----------------------
+ITER: 4
+ RHS NORM: [PRES = 7.1081e+01; IDX:   1] [ZCSUM = 4.9621e-17; IDX:   1] [COMPS = 1.0628e+08; IDX:   1]
+ VAR NORM: [PRES = 7.1114e+01; IDX:   1] [RATE  = 5.6355e+09; IDX:   1] [ZC    = 2.0610e+02; IDX:   1]
+ SEG SWITCH NUM: 1 CONN SWITCH NUM: 0 LIN SOLV IT NUM: 1 LIN SOLV PREC: 6.678464559508205e-32 PRES CHOPS: 0 RATE CHOPS: 1 ZC CHOPS: 2 REG NUM: 0 WEIGHT: 1.0000e+00 WSEGITER: 1.0000e+00 STEP CHOP WEIGHT 1.0000e+00
+-----------------------
+-----------------------
+ITER: 5
+ RHS NORM: [PRES = 7.2849e-02; IDX:   1] [ZCSUM = 6.4526e-04; IDX:   1] [COMPS = 2.3328e+06; IDX:   1]
+ VAR NORM: [PRES = 7.1114e+01; IDX:   1] [RATE  = 5.6355e+09; IDX:   1] [ZC    = 2.0610e+02; IDX:   1]
+ SEG SWITCH NUM: 0 CONN SWITCH NUM: 0 LIN SOLV IT NUM: 1 LIN SOLV PREC: 6.678464559508205e-32 PRES CHOPS: 0 RATE CHOPS: 0 ZC CHOPS: 0 REG NUM: 1 WEIGHT: 1.0000e+00 WSEGITER: 1.0000e+00 STEP CHOP WEIGHT 1.0000e+00
+-----------------------
+<<<<<<<<<< Control: BHP: 68.9476 NOT CONVERGED in 6 Iterations <<<<<<<<<< Err: BAD MATRIX <<<<<<<<<<<<<<<<<<<<<<< 
